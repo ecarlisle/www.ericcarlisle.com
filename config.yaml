@@ -1,0 +1,4 @@
+# Site Settings
+baseURL: "http://www.ericcarlisle.com/"
+title: "Eric Carlisle"
+theme: "podium"
