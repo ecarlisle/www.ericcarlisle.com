@@ -1,0 +1,25 @@
+{
+  "name": "www.ericcarlisle.com",
+  "version": "1.0.0",
+  "description": "Website for Eric Carlisle",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ecarlisle/www.ericcarlisle.com.git"
+  },
+  "keywords": [
+    "Eric",
+    "Carlisle",
+    "UI",
+    "UX"
+  ],
+  "author": "Eric Carlisle",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ecarlisle/www.ericcarlisle.com/issues"
+  },
+  "homepage": "https://github.com/ecarlisle/www.ericcarlisle.com#readme"
+}
