@@ -1,4 +1,64 @@
 # Site Settings
 baseURL: "http://www.ericcarlisle.com/"
 title: "Eric Carlisle"
+copyright: "This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License."
 theme: "podium"
+author:
+  email: "Eric Carlisle"
+  name: "eric@ericcarlisle.com"
+languageCode: "en-US"
+theme: "podium"
+canonifyURLs: true
+config: "config.toml"
+enableGitInfo: true
+enableRobotsTXT: true
+googleAnalytics: ""
+permalinks:
+  post: /:year/:month/:day/:slug/
+sitemap:
+  changefreq: "weekly"
+  priority: "0.5"
+  filename: "sitemap.xml"
+params:
+  headertitle:
+    title: "Eric Carlisle"
+    subtitle: "UI Developer, UX Designer"
+  profile:
+    image: "/assets/img/profile.png"
+    name: "Eric Carlisle"
+    title: "UI Developer, UX Designer"
+  social:
+    facebook:
+      admins: "eric.carlisle"
+      appid: "616445445121972"
+    twitter:
+      username: "eric_carlisle"
+    instagram:
+      username: "ericcarlisle"
+    github:
+      username: "ecarlisle"
+    medium:
+      username: "@eric_carlisle"
+    slideshare:
+      username: "ericcarlisle"
+Menu:
+  main:
+    - Name: "About"
+      URL: "/about/"
+      Weight: "100"
+
+    - Name: "Posts"
+      URL: "/posts/"
+      Weight: "200"
+
+    - Name: "Presentations"
+      URL: "/presentations/"
+      Weight: "300"
+
+    - Name: "Projects"
+      URL: "/projects/"
+      Weight: "400"
+
+    - Name: "Contact"
+      URL: "/contact/"
+      Weight: "500"
