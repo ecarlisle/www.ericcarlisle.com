@@ -4,7 +4,8 @@
   "description": "Website for Eric Carlisle",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack --progress --colors"
   },
   "repository": {
     "type": "git",
@@ -13,8 +14,8 @@
   "keywords": [
     "Eric",
     "Carlisle",
-    "UI",
-    "UX"
+    "UI Development",
+    "UX Design"
   ],
   "author": "Eric Carlisle",
   "license": "ISC",
@@ -23,12 +24,18 @@
   },
   "homepage": "https://github.com/ecarlisle/www.ericcarlisle.com#readme",
   "devDependencies": {
+    "autoprefixer": "^7.1.1",
+    "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.4",
+    "cssnano": "^3.10.0",
     "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.11.1",
     "jshint": "^2.9.4",
     "node-sass": "^4.5.3",
+    "postcss-loader": "^2.0.5",
     "sass-loader": "^6.0.5",
     "style-loader": "^0.18.1",
+    "url-loader": "^0.5.8",
     "webpack": "^2.6.1"
   }
 }
