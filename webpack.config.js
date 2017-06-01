@@ -62,5 +62,14 @@ module.exports = {
   },
   plugins: [
   	new ExtractTextPlugin('./css/main.css'),
+    new copyWebpackPlugin([
+      {
+        from: {
+          glob:'images/**/*', 
+          dot: true,
+        to: 'images/[name].[ext]',
+        },
+      },
+    ]),
   ],
 };
