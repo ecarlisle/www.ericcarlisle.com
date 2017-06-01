@@ -2,6 +2,8 @@
 
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const copyWebpackPlugin = require('copy-webpack-plugin');
+const themeName = 'podium';
 
 // Paths
 const sourcePath = path.resolve(__dirname, 'themes', 'podium', 'static');
@@ -21,6 +23,16 @@ module.exports = {
           			sourceMap: true,
           		}
           	},
+						{
+							loader: 'postcss-loader',
+							options: {
+								plugins: (loader) => [
+									require('autoprefixer')(),
+									require('cssnano'),
+								],
+          			sourceMap: true,
+							},
+						},
   					{
   						loader: 'sass-loader',
           		options: {
