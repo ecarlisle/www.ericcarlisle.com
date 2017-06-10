@@ -48,6 +48,7 @@ module.exports = {
 	entry: {
 		app: [
 			'./js/main.js',
+      'purecss',
 			'./scss/main.scss',
 		],
 	},
@@ -55,11 +56,14 @@ module.exports = {
 		path: path.resolve(buildPath),
 		filename: './js/main.js',
 	},
-//	watch: true,
+  watch: true,
+/*
 	devServer: {
 		inline: true,
     contentBase: sourcePath,
   },
+*/
+  devtool: 'source-map',
   plugins: [
   	new ExtractTextPlugin('./css/main.css'),
     new copyWebpackPlugin([
