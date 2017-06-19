@@ -1,3 +1,105 @@
-.flex {
-	display: flex;
+@import 'mixins';
+
+@include fontface(exo, exo-regular, normal, normal);
+@include fontface(exo2, exo2-regular, normal, normal);
+@include fontface(opensans, opensans-regular, normal, normal);
+@include fontface(droidserif, droidserif, normal, normal);
+@include fontface(oswald, oswald-regular, normal, normal);
+@include fontface(quattrocento, quattrocento-regular, normal, normal);
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	color: #333;
+	font-size: 1.6rem;
+}
+
+header, main, footer {
+	margin: 0 auto;
+	max-width: 128rem;
+}
+
+a {
+	color: #69C;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+#container {
+	max-width: 128rem;
+}
+
+// ---------- Font families in PureCSS grids ---------- //
+
+#site-header.pure-g [class *= "pure-u"] {
+	font-family: 'exo2', sans-serif;
+	border-bottom: solid 1px #333;
+	margin-bottom: 2rem;
+	padding: 2rem 1rem;
+	.title {
+		font-size: 3rem;
+	}
+	.subtitle {
+		font-size: 2.2rem;
+	}
+	.navigation {
+		font-size: 1.8rem;
+		list-style-type: none;
+		margin: 1rem 0 0 0;
+		padding: 0;
+		text-align: right;
+		li {
+			display: inline-block;
+			margin-right: 1.5rem;
+			&:last {
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+#site-main.pure-g [class *= "pure-u"] {
+	font-family: 'quattrocento', serif;
+	font-size: 2rem;
+	line-height: 3rem;
+	h1 {
+		font: normal normal 400 3.2rem/3.2rem 'oswald', sans-serif;
+		line-height: 3.2rem;
+		margin: 0 0 2rem;
+	}
+	.postdate {
+		font-family: 'oswald', sans-serif;
+		margin: 1rem 0;
+	}
+}
+
+#site-footer.pure-g [class *= "pure-u"] {
+	font-family: 'exo2', sans-serif;
+	font-size: 1rem;
+	border-top : solid 1px #333;
+	margin-top: 3rem;
+	padding: 3rem;
+	text-align: right;
+}
+
+.highlight {
+	border-radius: 1rem;
+	font-size: 1.6rem;
+	padding: 1.6rem;
+	pre {
+		margin: 0;
+	}
+}
+
+.blog-image {
+	max-width: 35rem;
 }
