@@ -1,12 +1,21 @@
 'use strict';
 
+// Node native modules
 const path = require('path');
+
+// To access native Webpack plugins
+const webpack = require('webpack');
+
+// Webpack plugins
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const copyWebpackPlugin = require('copy-webpack-plugin');
+
+// Hugo variables
 const themeName = 'podium';
 
 // Paths
-const sourcePath = path.resolve(__dirname, 'themes', 'podium', 'static');
+const sourcePath = path.resolve(__dirname, 'themes', themeName, 'static');
 const buildPath = path.resolve(__dirname, 'static');
 
 module.exports = {
