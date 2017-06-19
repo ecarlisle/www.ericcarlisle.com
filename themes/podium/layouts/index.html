@@ -2,8 +2,17 @@
 <html lang="en-US">
 	{{ partial "head.html" . }}
 	<body>
-			{{ partial "header.html" . }}
-			{{ partial "main.html" . }}
+		{{ partial "header.html" . }}
+		<main id="site-main" class="pure-g">
+			{{ partial "aside.html" . }}
+			<div class="pure-u-1 pure-u-md-3-4">
+				<ul id="list">
+		            {{ range .Data.Pages }}
+		                {{ .Render "summary" }}
+		            {{ end }}
+		        </ul>
+			</div>
+		</main>
 	</body>
 	{{ partial "footer.html" . }}
 </html>
