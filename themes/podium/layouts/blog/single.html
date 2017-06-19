@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en-US">
+	{{ partial "head.html" . }}
+	<body>
+		{{ partial "header.html" . }}
+		<main id="site-main" class="pure-g">
+			{{ partial "aside.html" . }}
+				<div class="pure-u-1 pure-u-md-3-4">
+				<h1>{{ .Title }}</h1>
+				<div class="postdate">{{ .Date.Format "Monday Jan 2, 2006" }}</div>
+			{{ .Content }}
+		</div>
+		</main>
+	</body>
+	{{ partial "footer.html" . }}
+</html>
