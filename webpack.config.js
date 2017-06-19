@@ -22,42 +22,63 @@ module.exports = {
 	module: {
 		rules: [
 			{
-        test: /\.(scss|css)$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
-          	{
-          		loader: 'css-loader',
-          		options: {
-          			sourceMap: true,
-          		}
-          	},
+				test: /\.(scss|css)$/,
+				use: ExtractTextPlugin.extract({
+					fallback: 'style-loader',
+					use: [
+						{
+							loader: 'css-loader',
+							options: {
+								sourceMap: true,
+							},
+						},
 						{
 							loader: 'postcss-loader',
 							options: {
-								plugins: (loader) => [
+								plugins: () => [
 									require('autoprefixer')(),
-									require('cssnano'),
+									// require('cssnano'),
 								],
-          			sourceMap: true,
+								sourceMap: true,
 							},
 						},
-  					{
-  						loader: 'sass-loader',
-          		options: {
-          			sourceMap: true,
-          		}
-  					},
-          ],
-        }),
-      },
-		],
+						{
+							loader: 'sass-loader',
+							options: {
+								sourceMap: true,
+							}
+						},
+					],
+				}),
+			},
+			{
+				test: /\.(woff|woff2)$/,
+				use: {
+					loader: 'file-loader',
+					options: {
+						mimetype: 'application/font-woff',
+						name: '/fonts/[name].[ext]',
+					},
+				},
+			},
+			{
+				test: /\.(ttf)$/,
+				use: {
+					loader: 'file-loader',
+					options: {
+						mimetype: 'application/font-ttf',
+						name: '/fonts/[name].[ext]',
+					},
+				},
+			},
+		], // :rules
 	},
 	context: sourcePath,
 	entry: {
 		app: [
 			'./js/main.js',
-      'purecss',
+			'purecss/build/pure.css',
+			'purecss/build/grids-responsive.css',
 			'./scss/main.scss',
 		],
 	},
@@ -65,24 +86,24 @@ module.exports = {
 		path: path.resolve(buildPath),
 		filename: './js/main.js',
 	},
-  watch: true,
+	watch: true,
 /*
 	devServer: {
 		inline: true,
-    contentBase: sourcePath,
-  },
+		contentBase: sourcePath,
+	},
 */
-  devtool: 'source-map',
-  plugins: [
-  	new ExtractTextPlugin('./css/main.css'),
-    new copyWebpackPlugin([
-      {
-        from: {
-          glob:'images/**/*', 
-          dot: true,
-        to: 'images/[name].[ext]',
-        },
-      },
-    ]),
-  ],
+	devtool: 'source-map',
+	plugins: [
+		new CleanWebpackPlugin(buildPath, {}),
+		new ExtractTextPlugin('./css/main.css'),
+		new copyWebpackPlugin([
+			{
+				from: {
+					glob: path.resolve(sourcePath, 'img') + '/**/*',
+					to: path.resolve(buildPath, 'img'),
+				},
+			},
+		]),
+	],
 };
