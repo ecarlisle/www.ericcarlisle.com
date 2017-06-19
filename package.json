@@ -29,6 +29,7 @@
   "homepage": "https://github.com/ecarlisle/www.ericcarlisle.com#readme",
   "devDependencies": {
     "autoprefixer": "^7.1.1",
+    "clean-webpack-plugin": "^0.1.16",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.4",
     "cssnano": "^3.10.0",
@@ -38,6 +39,7 @@
     "node-sass": "^4.5.3",
     "postcss-loader": "^2.0.5",
     "purecss": "^1.0.0",
+    "pygments-css": "^1.0.0",
     "sass-loader": "^6.0.5",
     "style-loader": "^0.18.1",
     "url-loader": "^0.5.8",
