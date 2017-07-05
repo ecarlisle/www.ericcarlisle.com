@@ -5,13 +5,13 @@ author: Eric Carlisle
 date: 2015-12-29 13:21:00
 tags: ["Jekyll", "Ruby", "Package Managers"]
 slug: "maintain-jekyll-performance-package-managers"
-description: "Jekyll uses a preceding underscore to exclude resources from a site build. This article explains how to prevent performance drops by files added by package managers."  
+description: "Jekyll uses a preceding underscore to exclude resources from a site build. This article explains how to prevent performance drops by files added by package managers."
 image: "/img/blog/jekyll.png"
 ---
-      
+
 {{< blogimg "jekyll-logo.svg" "Jekyll Logo" >}}
 
-When getting started with a [Jekyll](http://jekyllrb.com/docs/structure/) site, it's very important to learn about its [directory structure](ahttp://jekyllrb.com/docs/structure) and how that works with the Jekyll generator. Most of this is very intuitative and you'll be quickly learning where to place templates, partials, posts, and general content pages. 
+When getting started with a [Jekyll](http://jekyllrb.com/docs/structure/) site, it's very important to learn about its [directory structure](ahttp://jekyllrb.com/docs/structure) and how that works with the Jekyll generator. Most of this is very intuitative and you'll be quickly learning where to place templates, partials, posts, and general content pages.
 <!--more-->
 
 You'll notice all the initial folders and the site configuration file begin with an underscore.
@@ -40,7 +40,7 @@ Let's add a few new resources to this site:
 └── scripts
 {{</ highlight >}}
 
-On the next Jekyll build, the generator will ignore the `projects.html` file and `images` directory. The remaining items will be processed and placed into the `_site`, the default Jekyll destination directory.  
+On the next Jekyll build, the generator will ignore the `projects.html` file and `images` directory. The remaining items will be processed and placed into the `_site`, the default Jekyll destination directory.
 
 {{< highlight bash >}}
 .
