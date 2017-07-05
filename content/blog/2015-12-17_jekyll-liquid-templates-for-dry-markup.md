@@ -16,7 +16,9 @@ If you've yet to check out [Jekyll](https://jekyllrb.com/), I'd strongly suggest
 For those already already working with Jekyll, you've probably been working with the [Liquid Ruby library](http://liquidmarkup.org/) for optimizing templates. Liquid is a quick learn and great tool for Jekyll templating. I recently used with Liquid to customize Jekyll's [head.html include](https://github.com/jekyll/jekyll/blob/master/lib/site_template/_includes/head.html) to optimize social channel metatags.
 <!--more-->
 
-I created a [Gist](https://gist.github.com/ecarlisle/6a92bffc12b1a8b07961) to illustrate my approach. 
+I created this [Gist](https://gist.github.com/ecarlisle/6a92bffc12b1a8b07961) to illustrate my approach. 
+
+{{< gist ecarlisle 6a92bffc12b1a8b07961 >}}
 
 To use the Gist as-is, you'll need to add the following mappings to Jekyll's site configuration file, [_config.yaml](https://github.com/jekyll/jekyll/blob/master/lib/site_template/_config.yml).
 
@@ -130,6 +132,3 @@ Now get the set of characters that we're looking for!
 {{< /highlight >}}
 
 Thank you [Moritz »mo.« Sauer](http://moritz.sauer.io/) and [M. Appelman](http://huphtur.nl) for feedback to improve this post and respective [Gist](https://gist.github.com/ecarlisle/6a92bffc12b1a8b07961)!
-
-{{< gist ecarlisle 6a92bffc12b1a8b07961 >}}
-
