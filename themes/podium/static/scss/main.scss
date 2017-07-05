@@ -14,13 +14,12 @@ html {
 }
 
 body {
-	color: #333;
+	color: $primary-text-color;
 	font-size: 1.6rem;
 }
 
-header, main, footer {
-	margin: 0 auto;
-	max-width: 128rem;
+figure {
+	margin: 0;
 }
 
 a {
@@ -32,72 +31,142 @@ a:hover {
 	text-decoration: underline;
 }
 
-#container {
-	max-width: 128rem;
+#container.pure-g [class *= "pure-u"] {
+
+	font: normal normal 400 2rem/3rem $serif-font-stack;
+	h1 {
+		font: normal normal 400 3rem/4rem $sans-font-stack;
+	}
+
+	h2 {
+		font: normal normal 400 2.6rem/3rem $sans-font-stack;
+	}
+
+	h3 {
+		font: normal normal 400 2.4rem/3rem $sans-font-stack;
+	}
+
+	.postdate {
+		font-family: $sans-font-stack;
+	}
 }
 
-// ---------- Font families in PureCSS grids ---------- //
+header.page-header.pure-g [class *= 'pure-u'] {
+	font-family: 'Roboto Condensed', 'helvetica Neue', Helvetica, sans-serif;
+}
 
-#site-header.pure-g [class *= "pure-u"] {
-	font-family: 'exo2', sans-serif;
-	border-bottom: solid 1px #333;
-	margin-bottom: 2rem;
-	padding: 2rem 1rem;
-	.title {
-		font-size: 3rem;
+footer.page-footer.pure-g [class *= "pure-u"] {
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+h1, h2 {
+	margin: 0 0 1rem;
+}
+
+hr {
+	border: solid 1px #ccc;
+	border-width: 1px 0 0 0;
+}
+
+header.page-header {
+	background-color: #ffab00;
+	margin-bottom: 3rem;
+	padding: 3rem 4rem;
+	text-transform: lowercase;
+	a {
+		color: #fff;
+		text-decoration: none;
 	}
-	.subtitle {
-		font-size: 2.2rem;
+}
+
+ul.page-navigation {
+	font-size: 2rem;
+	list-style-type: none;
+	margin: 1.4rem 0 0 0;
+	padding: 0;
+	text-align: right;
+	li {
+		display: inline-block;
+		padding: 0 0 0 2rem;
 	}
-	.navigation {
-		font-size: 1.8rem;
-		list-style-type: none;
-		margin: 1rem 0 0 0;
-		padding: 0;
-		text-align: right;
-		li {
-			display: inline-block;
-			margin-right: 1.5rem;
-			&:last {
-				margin-right: 0;
-			}
+	&:hover, a.active {
+		text-decoration: underline;
+	}
+}
+
+	a.page-title {
+		display: inline-block;
+		font-size: 4rem;
+		font-weight: 300;
+		&:hover {
+			text-decoration: none;
 		}
 	}
+
+aside.page-profile {
+	padding: 0 4rem;
+	.headshot {
+		border-radius: 1rem;
+		display: block;
+		margin-bottom: 1rem;
+	}
+	figcaption {
+		font-family: $sans-font-stack;
+		display: block;
+		text-align: center;
+	}
+	.social-icons {
+		text-align: center;
+	}
+
 }
 
-#site-main.pure-g [class *= "pure-u"] {
-	font-family: 'quattrocento', serif;
-	font-size: 2rem;
-	line-height: 3rem;
-	h1 {
-		font: normal normal 400 3.2rem/3.2rem 'oswald', sans-serif;
-		line-height: 3.2rem;
-		margin: 0 0 2rem;
-	}
-	.postdate {
-		font-family: 'oswald', sans-serif;
-		margin: 1rem 0;
-	}
+aside.page-sidebar {
+	padding: 0 2rem 0 3rem;
 }
 
-#site-footer.pure-g [class *= "pure-u"] {
-	font-family: 'exo2', sans-serif;
-	font-size: 1rem;
+footer.page-footer {
 	border-top : solid 1px #333;
-	margin-top: 3rem;
-	padding: 3rem;
+	font-size: 1.8rem;
+	margin: 10rem 0 0 0;
+	padding: 2rem 5rem;
 	text-align: right;
 }
 
-.highlight {
+div.highlight {
 	border-radius: 1rem;
 	font-size: 1.6rem;
 	padding: 1.6rem;
 	pre {
+		color: #eee;
 		margin: 0;
 	}
 }
 
+.social-icons {
+	a {
+		border-radius: 3px;
+		height: 38px;
+		width: 38px;
+		display: inline-block;
+		padding: 5px;
+		&:hover {
+			background-color: #e5e5e5;
+		}
+		img {
+			height: 28px;
+			width: 28px;
+		}
+	}
+}
+
 .blog-image {
-	max-width: 35rem;
+	display: inline-block;
+	margin: 2rem;
+	max-width: 30rem;
+	text-align: right;
+}
+
+.gist-data {
+	max-height: 45rem
 }
