@@ -49,18 +49,14 @@ Menu:
       URL: "/about/"
       Weight: "100"
 
-    - Name: "Posts"
-      URL: "/posts/"
-      Weight: "200"
-
     - Name: "Presentations"
       URL: "/presentations/"
-      Weight: "300"
+      Weight: "200"
 
     - Name: "Projects"
       URL: "/projects/"
-      Weight: "400"
+      Weight: "300"
 
     - Name: "Contact"
       URL: "/contact/"
-      Weight: "500"
+      Weight: "400"
