@@ -1,0 +1,20 @@
+#blogroll {
+	margin: 0;
+	padding: 0;
+}
+
+.image-gallery {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 3rem 0;
+	a {
+		color: transparent;
+	}
+	img {
+		margin: 1rem;
+		border: 1px solid $primary-color-dark;
+
+	}
+}

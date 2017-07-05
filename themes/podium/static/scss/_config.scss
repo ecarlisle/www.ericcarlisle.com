@@ -1,0 +1,26 @@
+/*----- Colors -----*/
+$primary-color-dark:   #388E3C;
+$primary-color:        #4CAF50;
+$primary-color-light:  #C8E6C9;
+$primary-color-text:   #FFFFFF;
+$accent-color:         #FFC107;
+$primary-text-color:   #212121; 
+$secondary-text-color: #757575;
+$divider-color:        #BDBDBD;
+
+/*----- Fonts -----*/
+$sans-font-stack: 'Roboto Condensed', 'Helvetica Neue', Helvetica, sans-serif;
+$serif-font-stack: Quattrocento, Times, serif;
+
+/*----- Mixins -----*/
+
+@mixin fontface ($name, $file, $weight, $style) {
+	@font-face {
+		font-family: '#{$name}';
+		src: url('../fonts/#{$name}/#{$file}.woff') format('woff2'),
+			 url('../fonts/#{$name}/#{$file}.woff') format('woff'),
+			 url('../fonts/#{$name}/#{$file}.ttf') format('truetype');
+		font-weight: $weight;
+		font-style: $style;
+	}
+}
