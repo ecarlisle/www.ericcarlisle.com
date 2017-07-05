@@ -2,7 +2,7 @@
   "name": "www.ericcarlisle.com",
   "version": "1.0.0",
   "description": "Website for Eric Carlisle",
-  "main": "index.js",
+  "main": "",
   "scripts": {
     "test": "./node_modules/jshint/bin/jshint ./themes/podium/static/js/main.js",
     "webpack": "webpack --progress --colors"
