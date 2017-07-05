@@ -14,7 +14,7 @@ enableGitInfo: true
 enableRobotsTXT: true
 googleAnalytics: ""
 permalinks:
-  blog: /:year/:month/:day/:slug/
+  blog: /:section/:year/:month/:day/:slug/
 pygmentsuseclasses: false
 publishdir: "pages"
 sitemap:
