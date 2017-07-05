@@ -17,6 +17,9 @@ const themeName = 'podium';
 // Paths
 const sourcePath = path.resolve(__dirname, 'themes', themeName, 'static');
 const buildPath = path.resolve(__dirname, 'static');
+const cssPath = path.resolve(buildPath, 'css');
+const jsPath = path.resolve(buildPath, 'js');
+const fontPath = path.resolve(buildPath, 'fonts');
 
 module.exports = {
 	module: {
@@ -30,6 +33,8 @@ module.exports = {
 							loader: 'css-loader',
 							options: {
 								sourceMap: true,
+								minimize: true,
+								importLoaders: 2,
 							},
 						},
 						{
@@ -76,10 +81,13 @@ module.exports = {
 	context: sourcePath,
 	entry: {
 		app: [
-			'./js/main.js',
 			'purecss/build/pure.css',
 			'purecss/build/grids-responsive.css',
+			'magnific-popup/dist/magnific-popup.css',
 			'./scss/main.scss',
+			'jquery',
+			'magnific-popup',
+			'./js/main.js',
 		],
 	},
 	output: {
@@ -95,15 +103,21 @@ module.exports = {
 */
 	devtool: 'source-map',
 	plugins: [
-		new CleanWebpackPlugin(buildPath, {}),
+		new CleanWebpackPlugin([cssPath, jsPath, fontPath], {}),
 		new ExtractTextPlugin('./css/main.css'),
-		new copyWebpackPlugin([
-			{
-				from: {
-					glob: path.resolve(sourcePath, 'img') + '/**/*',
-					to: path.resolve(buildPath, 'img'),
-				},
-			},
-		]),
+		new webpack.ProvidePlugin({
+			$: "jquery",
+			jQuery: "jquery",
+			"window.jQuery": "jquery"
+		}),
+//		new copyWebpackPlugin([
+//			{
+//				from: {
+//					glob: path.resolve(sourcePath, 'img') + '/**/*',
+//					to: path.resolve(buildPath, 'img'),
+//				},
+//			},
+//		]),
+
 	],
 };
