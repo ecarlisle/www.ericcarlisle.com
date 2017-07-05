@@ -3,14 +3,23 @@
 	{{ partial "head.html" . }}
 	<body>
 		{{ partial "header.html" . }}
-		<main id="site-main" class="pure-g">
-			{{ partial "aside.html" . }}
-				<div class="pure-u-1 pure-u-md-3-4">
-				<h1>{{ .Title }}</h1>
-				<div class="postdate">{{ .Date.Format "Monday Jan 2, 2006" }}</div>
-			{{ .Content }}
+		<div id="container" class="pure-g">
+				{{ partial "profile.html" . }}
+			<main class="pure-u-1 pure-u-md-5-8">
+				<h1>
+					{{ .Title }}
+				</h1>
+				<div class="postdate">
+					{{ .Date.Format "Monday Jan 2, 2006" }}
+				</div>
+				{{ .Content }}
+				{{ partial "disqus.html" . }}
+			</main>
+			{{ partial "sidebar.html" . }}
 		</div>
-		</main>
+		{{ partial "footer.html" . }}
+		<script src="{{ .Site.BaseURL }}js/main.js"></script>
+		{{ partial "google-analytics.html" . }}
+		</script>
 	</body>
-	{{ partial "footer.html" . }}
 </html>
