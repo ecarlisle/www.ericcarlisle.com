@@ -1,11 +1,9 @@
-@import 'mixins';
-
-@include fontface(exo, exo-regular, normal, normal);
-@include fontface(exo2, exo2-regular, normal, normal);
-@include fontface(opensans, opensans-regular, normal, normal);
-@include fontface(droidserif, droidserif, normal, normal);
-@include fontface(oswald, oswald-regular, normal, normal);
-@include fontface(quattrocento, quattrocento-regular, normal, normal);
+/*!
+Eric Carlisle : UI Developer, UX Designer
+*/
+@import 'config';
+@import 'layout';
+@import 'components';
 
 * {
 	box-sizing: border-box;
