@@ -1,7 +1,6 @@
 'use strict';
 
 if ($('.image-gallery').length) {
-
 	$('.image-gallery').magnificPopup({
 	delegate: 'a',
 	type: 'image',
@@ -12,8 +11,8 @@ if ($('.image-gallery').length) {
 			navigateByImgClick: true,
 			tPrev: 'Previous (Left arrow key)',
 			tNext: 'Next (Right arrow key)',
-			tCounter: '<span class="mfp-counter">%curr% of %total%</span>' // markup of counter		},
+			tCounter: '<span class="mfp-counter">%curr% of %total%</span>',
 		},
-	    mainClass: 'mfp-img-mobile',
+		mainClass: 'mfp-img-mobile',
 	});
 }
