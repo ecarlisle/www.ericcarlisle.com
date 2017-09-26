@@ -1,26 +1,13 @@
-/*----- Colors -----*/
-$primary-color-dark:   #388E3C;
-$primary-color:        #4CAF50;
-$primary-color-light:  #C8E6C9;
-$primary-color-text:   #FFFFFF;
-$accent-color:         #FFC107;
-$primary-text-color:   #212121; 
-$secondary-text-color: #757575;
-$divider-color:        #BDBDBD;
+// ---------- Colors ---------- //
+$dark-blue: #223647;
+$med-blue: #376f93;
+$light-blue: #a3b6c4;
+$white: #f6f4f4;
+$dark-gray: #666;
+$link-color: #387093;
+$border-color: #666666;
 
-/*----- Fonts -----*/
-$sans-font-stack: 'Roboto Condensed', 'Helvetica Neue', Helvetica, sans-serif;
-$serif-font-stack: Quattrocento, Times, serif;
-
-/*----- Mixins -----*/
-
-@mixin fontface ($name, $file, $weight, $style) {
-	@font-face {
-		font-family: '#{$name}';
-		src: url('../fonts/#{$name}/#{$file}.woff') format('woff2'),
-			 url('../fonts/#{$name}/#{$file}.woff') format('woff'),
-			 url('../fonts/#{$name}/#{$file}.ttf') format('truetype');
-		font-weight: $weight;
-		font-style: $style;
-	}
-}
+// ---------- Fonts ---------- //
+$header-footer-font-stack: 'Exo 2', 'Helvetica Neue', Helvetica, sans-serif;
+$title-font-stack: 'Roboto Condensed', 'Helvetica Neue', Helvetica, sans-serif;
+$content-font-stack: 'Roboto', 'Helvetica Neue', Helvetica, sans-serif;

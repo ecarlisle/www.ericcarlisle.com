@@ -1,0 +1,97 @@
+// ----- Header & Title ----- //
+header.page-header {
+	background: $dark-blue;
+	font-family: $header-footer-font-stack;
+	font-weight: 300;
+	padding: 0.5rem 0 0.5rem 3rem;
+	margin-bottom: 1rem;
+	text-transform: uppercase;
+
+	@include bp(md) {
+		padding: 1rem;
+	}
+
+	a {
+		color: $white;
+	}
+
+	>.title {
+		font-size: 1.5rem;
+		&:hover, &:active, &:focus, {
+			text-decoration: none;
+		}
+		@include bp(lg) {
+			padding-top: 1.2rem;
+			.name {
+				font-size: 2rem;
+			}
+			.job {
+				font-size: 1.8rem;
+			}
+		}
+	}
+}
+
+// ----- Main Navigation ----- //
+nav.page-navigation {
+	display: inline-block;
+	padding: 0;
+	position: absolute;
+	@include bp(md) {
+		position: static;
+		display: flex;
+		justify-content: flex-end;
+	}
+	@include bp(lg) {
+		padding: 1.6rem;
+	}
+	top: 0.8rem;
+	left: 1rem;
+	img.hamburger {
+		width: 1.6rem;
+		height: auto;
+		margin: 0;
+	}
+
+	@include bp(md) {
+		img.hamburger {
+			display: none;
+		}
+	}
+
+	ul {
+		background: #64727e; // TODO
+		display: none;
+		list-style-type: none;
+		margin: 0;
+		max-width: 20rem;
+		padding: 1rem 2rem;
+		@include bp(md) {
+			display: flex;
+			font-size: 1.4rem;
+			max-width: 100%;
+			padding: 0;
+		}
+		li {
+			margin: 0;
+			padding: 0 0 1rem 1.5rem;
+			a:hover, a.active {
+				text-decoration: underline;
+			}
+			@include bp(md) {
+				padding: 0 0 0 1rem;
+			}
+		}
+
+		@include bp(md) {
+			background: transparent;
+			display: inline-block;
+			li {
+				display: inline-block;
+			}
+		}
+	}
+
+
+}
+

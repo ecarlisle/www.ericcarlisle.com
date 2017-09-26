@@ -2,10 +2,16 @@
 Eric Carlisle : UI Developer, UX Designer
 */
 @import 'config';
+@import 'mixins';
 @import 'layout';
+@import 'header';
+@import 'profile';
+@import 'content';
+@import 'sidebar';
 @import 'components';
+@import 'footer';
 
-* {
+*, *:after, *:before {
 	box-sizing: border-box;
 }
 
@@ -14,16 +20,25 @@ html {
 }
 
 body {
-	color: $primary-text-color;
+	background: $white;
+	color: $dark-gray;
+	font-family: $content-font-stack;
 	font-size: 1.6rem;
+	font-weight: 300;
+	line-height: 3rem;
+	margin: 0;
+	padding: 0;
 }
 
 figure {
 	margin: 0;
+	image {
+		display: inline-block;
+	}
 }
 
 a {
-	color: #69C;
+	color: $med-blue;
 	text-decoration: none;
 }
 
@@ -31,32 +46,44 @@ a:hover {
 	text-decoration: underline;
 }
 
-#container.pure-g [class *= "pure-u"] {
+h1, h2, h3 {
+	font-family: $title-font-stack;
+	font-weight: 400;
+}
 
-	font: normal normal 400 2rem/3rem $serif-font-stack;
-	h1 {
-		font: normal normal 400 3rem/4rem $sans-font-stack;
-	}
-
-	h2 {
-		font: normal normal 400 2.6rem/3rem $sans-font-stack;
-	}
-
-	h3 {
-		font: normal normal 400 2.4rem/3rem $sans-font-stack;
-	}
-
-	.postdate {
-		font-family: $sans-font-stack;
+h1 {
+	border-bottom: solid 1px $dark-gray;
+	font-size: 2rem;
+	line-height: 3rem;
+	@include bp(md) {
+		font-size: 3rem;
+		padding-bottom: 1rem;
 	}
 }
 
-header.page-header.pure-g [class *= 'pure-u'] {
-	font-family: 'Roboto Condensed', 'helvetica Neue', Helvetica, sans-serif;
+h2 {
+//	font-size: 2.6rem;
+//	line-height: 3rem;
+	font-size: 2rem;
+	line-height: 3rem;
+	margin-top: 2rem;
+
+	@include bp(lg) {
+		font-size: 2.6rem;
+	}
 }
 
-footer.page-footer.pure-g [class *= "pure-u"] {
-	font-family: 'Roboto Condensed', sans-serif;
+
+h3 {
+//	font-size: 2rem;
+//	line-height: 1rem;
+//	margin: 3rem 0 1rem;
+	font-size: 2rem;
+	line-height: 2.5rem;
+}
+
+.postdate {
+	font-family: $content-font-stack;
 }
 
 h1, h2 {
@@ -66,71 +93,6 @@ h1, h2 {
 hr {
 	border: solid 1px #ccc;
 	border-width: 1px 0 0 0;
-}
-
-header.page-header {
-	background-color: #ffab00;
-	margin-bottom: 3rem;
-	padding: 3rem 4rem;
-	text-transform: lowercase;
-	a {
-		color: #fff;
-		text-decoration: none;
-	}
-}
-
-ul.page-navigation {
-	font-size: 2rem;
-	list-style-type: none;
-	margin: 1.4rem 0 0 0;
-	padding: 0;
-	text-align: right;
-	li {
-		display: inline-block;
-		padding: 0 0 0 2rem;
-	}
-	&:hover, a.active {
-		text-decoration: underline;
-	}
-}
-
-	a.page-title {
-		display: inline-block;
-		font-size: 4rem;
-		font-weight: 300;
-		&:hover {
-			text-decoration: none;
-		}
-	}
-
-aside.page-profile {
-	padding: 0 4rem;
-	.headshot {
-		border-radius: 1rem;
-		display: block;
-		margin-bottom: 1rem;
-	}
-	figcaption {
-		font-family: $sans-font-stack;
-		display: block;
-		text-align: center;
-	}
-	.social-icons {
-		text-align: center;
-	}
-
-}
-
-aside.page-sidebar {
-	padding: 0 2rem 0 3rem;
-}
-
-footer.page-footer {
-	border-top : solid 1px #333;
-	font-size: 1.8rem;
-	margin: 10rem 0 0 0;
-	padding: 2rem 5rem;
-	text-align: right;
 }
 
 div.highlight {
@@ -160,13 +122,6 @@ div.highlight {
 	}
 }
 
-.blog-image {
-	display: inline-block;
-	margin: 2rem;
-	max-width: 30rem;
-	text-align: right;
-}
-
 .gist-data {
-	max-height: 45rem
+	max-height: 45rem;
 }

@@ -1,0 +1,76 @@
+// ----- Page Profile ----- //
+aside.page-profile {
+	align-items: center;
+	border-bottom: solid 1px $dark-blue;
+	padding: 0.5rem 2rem;
+	display: flex;
+	margin: 0 0 1rem 0;
+
+	@include bp(md) {
+		border-bottom: 0;
+		display: block;
+	}
+
+	figure {
+		text-align: center;
+		display: inline-block;
+		img.headshot {
+			display: none;
+			height: auto;
+
+			@include bp(sm) {
+				border-radius: 0.5rem;
+				display: inline-block;
+				max-width: 7rem;
+
+			}
+			@include bp(md) {
+				border-radius: 1rem;
+				max-width: 100%;
+			}
+		}
+
+		figcaption {
+			display: none;
+			@include bp(lg) {
+				display: block;
+				span {
+					display: block;
+					@include bp(xl) {
+						display: inline;
+					}
+				}
+			}
+		}
+	}
+
+	ul.social-icons {
+		display: flex;
+		justify-content: space-around;
+		list-style-type: none;
+		margin: 0 3rem;
+		padding: 0;
+		text-align: center;
+		width: 100%;
+		@include bp(md) {
+			margin: 0;
+			display: block;
+		}
+		li {
+			display: inline-block;
+		}
+		img {
+			height: auto;
+			width: 2rem;
+			@include bp(sm) {
+				width: 3rem;
+			}
+			@include bp(md) {
+				width: 2rem;
+			}
+			@include bp(md) {
+				width: 2.4rem;
+			}
+		}
+	}
+}
