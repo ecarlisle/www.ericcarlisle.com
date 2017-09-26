@@ -1,5 +1,4 @@
 ---
-layout: post
 type: article
 title: A Tale of Two Characters - My Code Indentation Autobiography
 taxonomies: []
@@ -7,12 +6,16 @@ author: Eric Carlisle
 date: 2016-06-06 9:00:00
 slug: My Code Indentation Autobiography
 tags: ["programming", "whitespace"]
-description: "This is a personal history of code indention over the last 20 years."  
-image: /assets/img/blog/ash.png
+description: "This is a personal history of code indention over the last 20 years."
+image:
+  src: "img/blog/code-indention.png"
+  alt: "Two spaces? Four Spaces? A Tab?"
+  class: "blog-image"
+  align: "right"
 ---
 
-The type and number of characters we use for code indention have and probably will always be a source of contention for programmers. Should we use tabs or spaces and how many of either? Some will consider this a tired argument, others find it comical, and some have very strong opinions on what's the right way to indent. These are all fair. What interests me is how different indention stylistics are more than mere preferences or opinions. They can make that person more efficient and less distracted. It's both a quandary of both Computer Science and Human Factors.
-<!--more-->
+The type and number of characters we use for code indention have and probably will always be a source of contention for programmers. Should we use tabs or spaces and how many of either? Some will consider this a tired argument, others find it comical, and some have very strong opinions on what's the right way to indent.<!--more--> These are all fair. What interests me is how different indention stylistics are more than mere preferences or opinions. They can make that person more efficient and less distracted. It's both a quandary of both Computer Science and Human Factors.
+
 This post is not to evangelize indentation styling, though in the end I'll let you know what I use and why. Also consider this a narrative of why I chose to indent the way I do. The topic can get try and lead to heated opinions, so we'll keep it short and use brevity.
 
 ##Chapter 1. - College : Tabs as a Source of Beer Money
@@ -36,7 +39,7 @@ Current day - I indent with two-spaces whenever possible. My rationale is:
 3. _I_ can better eyeball where I open and close code. I know editors have helped with this for a long time, but I don't like depending on that.
 4. Diffs are easier _for me_ to review in GitHub, BitBucket, Stash, and other source control systems with web interfaces.
 5. Editors like Sublime Text are now much better at making two spaces feel like a tab.
-6. _I_ **still* want to use less characters. 
+6. _I_ **still* want to use less characters.
 
 <a name="footnote1" style="font-size: 11px">_1. Caveat: I dig bigger indents with Python._</a>
 
@@ -45,28 +48,28 @@ Current day - I indent with two-spaces whenever possible. My rationale is:
 Do I still want to use a single character to indent?  Yes I do, but there's also the need to abide by project and team styling requirements. I wonder if tooling is out there for having and eating cake. I'd love it if:
 
 1. My editor indented at a two monospace character depth with a single keystroke.
-2. I could configure my editor to save files to comply with any required standard - 2-spaces, 4-spaces, or anything else deemed "the right way." 
+2. I could configure my editor to save files to comply with any required standard - 2-spaces, 4-spaces, or anything else deemed "the right way."
 3. I could reopen these files and my code is shown as per my preferences in #1.
 4. Here's an example of this idealism:
 
-<!-- 
+<!--
   Please do not count pipes as indentation.
   They are included to make the example more readable.
 -->
 {{< highlight html >}}
 12|<p>
 1234|I want my editor to always use this intent.
-1234|When I press tab, I'll get a 2-character shallow indent. 
-1234|That's how I to best read code. At this point 
-1234|don't think of tab as a single character that's four 
-1234|spaces long. I hit tab and I get an indent that's the 
+1234|When I press tab, I'll get a 2-character shallow indent.
+1234|That's how I to best read code. At this point
+1234|don't think of tab as a single character that's four
+1234|spaces long. I hit tab and I get an indent that's the
 1234|length of two monospace characters.
 12|</p>
 
 1234|<p>
-12345678|When I save this file, I want each tab to be saved as 
-12345678|whatever the project requires. As an example, here's 
-12345678|a 4-space indent that the editor saves out. 
+12345678|When I save this file, I want each tab to be saved as
+12345678|whatever the project requires. As an example, here's
+12345678|a 4-space indent that the editor saves out.
 1234</p>
 
 12|<p>
