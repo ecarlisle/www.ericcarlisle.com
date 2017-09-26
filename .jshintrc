@@ -1,24 +1,22 @@
-{
-  // Environments
-  "node": true,
-  "browser": true,
 
-  // Options
-	"bitwise": true, 		// Prohibit bitwise operators (&, |, ^, etc.).
-  "curly": true,			// Require {} for every new block or scope.
-  "eqeqeq": true,			// Require triple equals i.e. `===`.
-  "forin": false,			// Tolerate `for in` loops without `hasOwnPrototype`.
-  "freeze" : true,		// Prohibits overwriting prototypes of native objects such as Array, Date
-  "immed": true,			// Require immediate invocations to be wrapped in parens e.g. `( function(){}() );`
-  "latedef": true,		// Prohibit variable use before definition.
-  "newcap": true,			// Require capitalization of all constructor functions e.g. `new F()`.
-  "noarg": true,			// Prohibit use of `arguments.caller` and `arguments.callee`.
-  "noempty": true,		// Prohibit use of empty blocks.
-  "nonew": false,			// Prohibit use of constructors for side-effects.
-  "plusplus": false,	// Prohibit use of `++` & `--`.
-  "quotmark": true,		// Force consistency of quotemarks
-  "undef": true,			// Require all non-global variables be declared before they are used.
-  "strict": true,			// Require `use strict` pragma in every file.
-  "trailing": true,		// Prohibit trailing whitespaces.
-  "unused": true			// Warn when you define and never use your variables
+{
+	"bitwise": true,
+	"browser": true,
+	"curly": true,
+	"eqeqeq": false,
+	"forin": true,
+	"freeze": true,
+	"latedef": true,
+	"laxbreak": true,
+	"maxparams": 3,
+	"noarg": true,
+	"noempty": true,
+	"node": true,
+	"nonbsp": true,
+	"nonew": true,
+	"jquery": true,
+	"quotmark": "single",
+	"trailingcomma": false,
+	"undef": true,
+	"unused": true
 }
