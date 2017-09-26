@@ -1,17 +1,19 @@
-<header class="page-header pure-g">
-	<div class="pure-u-1 pure-u-md-1-2">
-		<a href="/" class="page-title">
-			Eric Carlisle : UI Developer, UX Designer
-		</a>
-	</div>
-	<nav class="pure-u-1 pure-u-md-1-2">
-		<ul class="page-navigation">
+<header class="wg page-header" itemscope itemtype="http://schema.org/WPHeader">
+	<a class="col-md-7-16 col-lg-8-16 title" href="/">
+		<span class="name">Eric Carlisle :</span>
+		<span class="job">UI Developer, UX Designer</span>
+	</a>
+	<nav class="page-navigation col-md-9-16 col-lg-8-16" itemscope itemtype="http://schema.org/SiteNavigationElement">
+		<img src="/img/global/hamburger-icon.svg" class="hamburger" alt="Mobile Menu" />
+		<ul>
 		{{ $currentNode := . }}
-		{{ range .Site.Menus.main }}<li>
+		{{ range .Site.Menus.main }}
+			<li>
 				<a class="sidebar-nav-item{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }} active{{end}}" href="{{.URL}}">
 					{{ .Name }}
 				</a>
-			</li>{{ end }}
+			</li>
+		{{ end }}
 		</ul>
 	</nav>
 </header>
