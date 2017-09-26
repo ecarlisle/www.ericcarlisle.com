@@ -13,7 +13,8 @@ enableGitInfo: true
 enableRobotsTXT: true
 googleAnalytics: ""
 permalinks:
-  post: /:year/:month/:day/:slug/
+  blog: /:year/:month/:day/:slug/
+  presentations: /:year/:month/:day/:slug/
 sitemap:
   changefreq: "weekly"
   priority: "0.5"
