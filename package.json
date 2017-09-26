@@ -31,20 +31,26 @@
     "autoprefixer": "^7.1.1",
     "clean-webpack-plugin": "^0.1.16",
     "copy-webpack-plugin": "^4.0.1",
-    "css-loader": "^0.28.4",
+    "css-loader": "^0.28.5",
+    "css-mqpacker": "^6.0.1",
     "cssnano": "^3.10.0",
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.11.1",
     "jquery": "^3.2.1",
     "jshint": "^2.9.4",
+    "jshint-loader": "^0.8.4",
     "magnific-popup": "^1.1.0",
     "node-sass": "^4.5.3",
+    "normalize.css": "^7.0.0",
     "postcss-loader": "^2.0.5",
     "prismjs": "^1.6.0",
     "purecss": "^1.0.0",
+    "reveal.js": "^3.5.0",
     "sass-loader": "^6.0.5",
     "style-loader": "^0.18.1",
     "url-loader": "^0.5.8",
-    "webpack": "^2.6.1"
-  }
+    "webpack": "^2.6.1",
+    "wee-grid": "^1.1.0"
+  },
+  "dependencies": {}
 }
