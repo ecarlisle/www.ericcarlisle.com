@@ -16,3 +16,17 @@ if ($('.image-gallery').length) {
 		mainClass: 'mfp-img-mobile',
 	});
 }
+
+function toggleMobileNavigation() {
+	$('.page-header nav ul').toggle();
+}
+
+
+function bindEventHandlers() {
+	$('.page-header .hamburger').on('click', toggleMobileNavigation);
+}
+
+
+$(document).ready(function(){
+	bindEventHandlers();
+});
