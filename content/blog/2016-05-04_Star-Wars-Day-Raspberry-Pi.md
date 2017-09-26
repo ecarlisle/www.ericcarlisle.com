@@ -6,9 +6,11 @@ date: 2016-05-04 9:00:00
 slug: "star-wars-day-raspberry-pi"
 tags: ["Star Wars", "Raspberry Pi", "Nanoblocks"]
 description: "Let's start with one of Raspberry Pi's newest, amazing innovations. Add a few hundred Nanoblocks. Geekery ensues."
----  
-
-{{< blogimg "StarDestroyerPiZero01_thumb.jpg" "The Pi Zero Star Destroyer" >}}
+image:
+  src: "img/blog/StarDestroyerPiZero01_thumb.jpg"
+  alt: "Star Destroyer chassis for Pi Zero"
+  class: "blog-image"
+---
 
 Happy Star Wars day! Let's have some fandom fun! :-)
 
@@ -18,7 +20,7 @@ Let's start with one of [Raspberry Pi's](https://www.raspberrypi.org/) newest in
 <div class="image-gallery tmar3">
     <a title="the Zero requires a MiniHDMI cable for AV and USB cables for power and peripherals." href="/img/blog/StarDestroyerPiZero01.jpg">
       <img src="/img/blog/StarDestroyerPiZero01_thumb.jpg" alt="" />
-    </a> 
+    </a>
     <a title="Not having a GPIO header, the Zero can have an extremely small footprint." href="/img/blog/StarDestroyerPiZero02.jpg">
       <img src="/img/blog/StarDestroyerPiZero02_thumb.jpg" alt="" />
     </a>
