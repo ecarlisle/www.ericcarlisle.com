@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en-US">
+	{{ partial "head" . }}
+	<body itemscope itemtype="http://schema.org/WebPage">
+		{{ partial "header" . }}
+		<div class="page-container wg">
+			<aside class="page-profile col-md-3-16">
+				{{ partial "profile.html" . }}
+			</aside>
+			<main class="page-main col-md-9-16">
+				<article>
+					<header>
+						<h1>
+							{{ .Title }}
+						</h1>
+						<div class="postdate">
+							{{ .Date.Format "Monday Jan 2, 2006" }}
+						</div>
+					</header>
+					<div class="blog-post clearfix">
+						{{ partial "image" . }}
+						{{ .Content }}
+						{{ partial "disqus" . }}
+					</div>
+				</article>
+			</main>
+			<aside class="page-sidebar col-lg-2-16">
+				{{ partial "sidebar.html" . }}
+			</aside>
+		</div>
+		{{ partial "footer" . }}
+		<script src="{{ .Site.BaseURL }}js/main.js"></script>
+		{{ partial "google-analytics" . }}
+	</body>
+</html>
