@@ -14,21 +14,29 @@ enableGitInfo: true
 enableRobotsTXT: true
 googleAnalytics: ""
 permalinks:
-  blog: /:section/:year/:month/:day/:slug/
+  blog: posts/:year/:month/:day/:slug/
+  presentations: presentations/:year/:month/:day/:slug/
 pygmentsuseclasses: false
-publishdir: "pages"
+publishdir: "site"
 sitemap:
   changefreq: "weekly"
   priority: "0.5"
   filename: "sitemap.xml"
 params:
+  DateForm: "Mon, Jan 2, 2006"
   headertitle:
     title: "Eric Carlisle"
     subtitle: "UI Developer, UX Designer"
   profile:
-    image: "/assets/img/profile.png"
+    image: "/img/global/eric-carlisle-300x300.png"
     name: "Eric Carlisle"
     title: "UI Developer, UX Designer"
+  organization:
+    name: "Eric Carlisle Consulting"
+    logo:
+      url: "assets/img/eric-carlisle-consuling-logo.png"
+      height: "60"
+      width: "600"
   social:
     facebook:
       admins: "eric.carlisle"
@@ -49,14 +57,23 @@ Menu:
       URL: "/about/"
       Weight: "100"
 
-    - Name: "Presentations"
-      URL: "/presentations/"
+  main:
+    - Name: "Home"
+      URL: "/"
+      Weight: "100"
+
+    - Name: "About Me"
+      URL: "/about/"
       Weight: "200"
 
-    - Name: "Projects"
-      URL: "/projects/"
+    - Name: "Blog"
+      URL: "/blog/"
       Weight: "300"
 
-    - Name: "Contact"
-      URL: "/contact/"
+    - Name: "Presentations"
+      URL: "/presentations/"
       Weight: "400"
+
+    - Name: "Portfolio"
+      URL: "/portfolio/"
+      Weight: "500"
