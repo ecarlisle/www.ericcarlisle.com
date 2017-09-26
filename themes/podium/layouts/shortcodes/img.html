@@ -1,0 +1,13 @@
+<figure itemprop="image"
+		itemscope
+		itemtype="http://schema.org/ImageObject"
+		{{ with .Get "class" }}class="{{.}}"{{ end }}
+		{{ with .Get "link"}}<a href="{{.}}">{{ end }}>
+	<img src="{{ .Get .Params.image.src }}"
+		{{ with .Get "class" }}class="{{.}}"{{ end }}
+		{{ with .Get "align"}}align="{{.}}">{{ end }}
+	/>
+	{{ with .Get "caption" }}
+		<figcaption>{{.}}</figcaption>
+	{{ end }}
+</figure>

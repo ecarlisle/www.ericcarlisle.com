@@ -1,0 +1,14 @@
+{{ $img := .Params.image }}
+{{ with $img.caption }}
+<figure itemprop="image"
+		itemscope
+		itemtype="http://schema.org/ImageObject"
+		{{ with $img.class }}class="{{ . }}"{{ end }}>
+	<a href="{{ .Permalink }}">
+	<img src="{{ .Site.BaseURL }}{{ $img.src }}" alt="{{ $img.alt }}"  />
+	<meta itemprop="caption" content="{{ $img.alt }}" />
+	<meta itemprop="contentUrl" content="{{ .Site.BaseURL }}{{ $img.src }}" />
+	</a>
+	{{ with $img.caption }}<figcaption itemprop="caption">{{.}}</figcaption>{{ end }}
+</figure>
+{{ end }}

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en-US">
+	{{ partial "head.html" . }}
+	<body itemscope itemtype="http://schema.org/WebPage">
+		{{ partial "header.html" . }}
+		<div class="page-container wg">
+			<aside class="page-profile col-md-3-16">
+				{{ partial "profile.html" . }}
+			</aside>
+			<main class="page-main col-md-12-16 col-lg-11-16">
+				<ul id="content-roll" itemscope itemtype="http://schema.org/Blog">
+					{{ range .Data.Pages }}
+						{{ .Render "summary" }}
+					{{ end }}
+				</ul>
+			</main>
+			<aside class="page-sidebar col-lg-2-16">
+				{{ partial "sidebar.html" . }}
+			</aside>
+		</div>
+		{{ partial "footer.html" . }}
+		<script src="{{ .Site.BaseURL }}js/main.js"></script>
+		{{ partial "google-analytics.html" . }}
+	</body>
+</html>
