@@ -9,7 +9,7 @@ const webpack = require('webpack');
 // Webpack plugins
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const copyWebpackPlugin = require('copy-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 // Hugo variables
 const themeName = 'podium';
@@ -25,6 +25,16 @@ module.exports = {
 	module: {
 		rules: [
 			{
+				test: /\.js$/,
+				enforce: 'pre',
+				exclude: /node_modules/,
+				use: [
+					{
+						loader: 'jshint-loader'
+					}
+				],
+			},
+			{
 				test: /\.(scss|css)$/,
 				use: ExtractTextPlugin.extract({
 					fallback: 'style-loader',
@@ -32,8 +42,8 @@ module.exports = {
 						{
 							loader: 'css-loader',
 							options: {
-								sourceMap: true,
-								minimize: true,
+								sourceMap: false,
+								minimize: false,
 								importLoaders: 2,
 							},
 						},
@@ -42,15 +52,17 @@ module.exports = {
 							options: {
 								plugins: () => [
 									require('autoprefixer')(),
+									// require('css-mqpacker'),
 									// require('cssnano'),
 								],
-								sourceMap: true,
+								sourceMap: false,
 							},
 						},
 						{
 							loader: 'sass-loader',
 							options: {
-								sourceMap: true,
+								outputStyle: 'expanded',
+								sourceMap: false,
 							}
 						},
 					],
@@ -81,12 +93,13 @@ module.exports = {
 	context: sourcePath,
 	entry: {
 		app: [
-			'purecss/build/pure.css',
-			'purecss/build/grids-responsive.css',
+			'normalize.css/normalize.css',
 			'magnific-popup/dist/magnific-popup.css',
 			'./scss/main.scss',
-			'jquery',
+//			'wee-grid/src/wee-grid.scss',
+			'./scss/wee-grid.css',
 			'magnific-popup',
+			'jquery',
 			'./js/main.js',
 		],
 	},
@@ -106,11 +119,10 @@ module.exports = {
 		new CleanWebpackPlugin([cssPath, jsPath, fontPath], {}),
 		new ExtractTextPlugin('./css/main.css'),
 		new webpack.ProvidePlugin({
-			$: "jquery",
-			jQuery: "jquery",
-			"window.jQuery": "jquery"
+			$: 'jquery',
+			jQuery: 'jquery',
+			'window.jQuery': 'jquery',
 		}),
-//		new copyWebpackPlugin([
 //			{
 //				from: {
 //					glob: path.resolve(sourcePath, 'img') + '/**/*',
