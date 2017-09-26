@@ -6,12 +6,18 @@ date: 2016-06-19 0:06:00
 tags: ["HUGO", "devObjective", "Static Sites"]
 slug: "static-sites-with-hugo-at-devobjective"
 description: "Having the opportunity to speak on static site generation with HUGO was an inspiring means of considering approaches to web production."
+image:
+  src: "img/blog/hugo-logo.png"
+  alt: "Hugo Logo"
+  class: "blog-image"
+  align: "right"
 ---
 
 I recently attended this year's [dev.Objective()](http://www.devobjective.com) web conference and was given an opportunity to present **Static Site Generation with HUGO**. Dev.Objective() always brings in heavy-duty brain power so I was very excited to geek out, get questions and in this case, **challenge comfort zones**.
+<!--more-->
 
 After all, static site generation can potentally be a comfort zone stresser for any web producer. The general idea of the Static Site Generator (SSG) approach is to simplify web production by greatly reducing technical dependencies. Databases and server-side platforms like PHP, Coldfusion, or ASP.NET aren't used to generate content dynamically. Instead, an SSG residing in the development environment uses templates to build all content into a volume of static assets (HTML, JS, CSS, fonts, images, etc...). These static assets are then uploaded to the production server environment.
-<!--more-->
+
 Instead of using a web application platform to generate content dynamically from a single page...
 
 {{< highlight text >}}
@@ -36,7 +42,7 @@ The main benefits of the SSG approach are to simplify web production while also 
 I chose to present on the [HUGO](http://gohugo.io) SSG because it stood out to be in the following ways:
 
 1. HUGO makes content a first-class citizen. Site design, creation, and maintenance are all centered on choices made with content strategy.
-     
+
 2. HUGO takes the simplification game a step further. It is a compiled binary written in [Go](https://golang.org/). This allows HUGO tremendous speed compared to other SSGs like [Jekyll](https://jekyllrb.com/) (also an awesome SSG) that depend on a runtime. Google designed Go to create powerful software with a simple, expressive, concise, and clean approach. HUGO's goals are aligned with its underlying technology to delivery web content.
 
 These are some of the great questions I was asked by dev.Objective() attendees, speakers, organizers, and sponsors.
