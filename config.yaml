@@ -1,6 +1,6 @@
 # Site Settings
 baseURL: "http://www.ericcarlisle.com/"
-title: "Eric Carlisle"
+title: "Eric Carlisle : UI Developer, UX Designer"
 copyright: "This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License."
 theme: "podium"
 author:
@@ -23,6 +23,7 @@ sitemap:
   priority: "0.5"
   filename: "sitemap.xml"
 params:
+  description: "Eric Carlisle is a UI Developer and UX Designer. His motto is KISS, to 'Keep it Stunningly Simple.'"
   DateForm: "Mon, Jan 2, 2006"
   headertitle:
     title: "Eric Carlisle"
