@@ -3,4 +3,5 @@ node_modules
 static/js
 static/css
 site
+upload
 log
