@@ -9,8 +9,7 @@ description: "Having the opportunity to speak on static site generation with HUG
 image:
   src: "img/blog/hugo-logo.png"
   alt: "Hugo Logo"
-  class: "blog-image"
-  align: "right"
+  class: "article-image"
 ---
 
 I recently attended this year's [dev.Objective()](http://www.devobjective.com) web conference and was given an opportunity to present **Static Site Generation with HUGO**. Dev.Objective() always brings in heavy-duty brain power so I was very excited to geek out, get questions and in this case, **challenge comfort zones**.

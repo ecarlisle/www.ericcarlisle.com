@@ -9,7 +9,7 @@ description: "Jekyll uses a preceding underscore to exclude resources from a sit
 image:
   src: "img/blog/jekyll-logo.svg"
   alt: "Jekyll Logo"
-  class: "blog-image"
+  class: "article-image"
 ---
 
 When getting started with a [Jekyll](http://jekyllrb.com/docs/structure/) site, it's very important to learn about its [directory structure](ahttp://jekyllrb.com/docs/structure) and how that works with the Jekyll generator. Most of this is very intuitative and you'll be quickly learning where to place templates, partials, posts, and general content pages.

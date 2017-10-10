@@ -9,8 +9,9 @@ description: "This article giveas an example of how Liquid may be optimized to k
 image:
   src: "img/blog/jekyll-logo.svg"
   alt: "Jekyll Logo"
-  class: "blog-image"
+  class: "article-image"
 ---
+
 If you've yet to check out [Jekyll](https://jekyllrb.com/), I'd strongly suggest doing so. It's a very powerful static site generator and a compelling tool for re-discovering strengths of a static website. I use it for [this website](https://github.com/ecarlisle/ecarlisle.github.io). It's a huge time saver for me, allowing me to devote more time to content creation. Its integraton with [Github Pages](https://help.github.com/articles/using-jekyll-with-pages/) also makes content publication a snap.
 
 For those already already working with Jekyll, you've probably been working with the [Liquid Ruby library](http://liquidmarkup.org/) for optimizing templates. Liquid is a quick learn and great tool for Jekyll templating. I recently used with Liquid to customize Jekyll's [head.html include](https://github.com/jekyll/jekyll/blob/master/lib/site_template/_includes/head.html) to optimize social channel metatags.

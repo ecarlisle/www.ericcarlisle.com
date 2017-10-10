@@ -10,8 +10,7 @@ description: "This is a personal history of code indention over the last 20 year
 image:
   src: "img/blog/code-indention.png"
   alt: "Two spaces? Four Spaces? A Tab?"
-  class: "blog-image"
-  align: "right"
+  class: "article-image"
 ---
 
 The type and number of characters we use for code indention have and probably will always be a source of contention for programmers. Should we use tabs or spaces and how many of either? Some will consider this a tired argument, others find it comical, and some have very strong opinions on what's the right way to indent.<!--more--> These are all fair. What interests me is how different indention stylistics are more than mere preferences or opinions. They can make that person more efficient and less distracted. It's both a quandary of both Computer Science and Human Factors.

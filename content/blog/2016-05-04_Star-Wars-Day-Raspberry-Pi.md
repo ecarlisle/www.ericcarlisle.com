@@ -9,7 +9,7 @@ description: "Let's start with one of Raspberry Pi's newest, amazing innovations
 image:
   src: "img/blog/StarDestroyerPiZero01_thumb.jpg"
   alt: "Star Destroyer chassis for Pi Zero"
-  class: "blog-image"
+  class: "article-image"
 ---
 
 Happy Star Wars day! Let's have some fandom fun! :-)
