@@ -6,7 +6,7 @@ date: 2017-09-25 06:00:00
 tags: ["eric carlisle", "portfolio"]
 description: "Listed below are professional engagements I've participated in during the last few years. I've spent much of my career as a consultant and in doing so have had the opportunity to work within a variety of verticals."
 ---
-<article id="portfolio">
+<article id="content-roll" class="portfolio">
 	<h1>Portfolio</h1>
 	<p>
 		Listed below are professional engagements I've participated in during the last few years. I've spent much of my career as a consultant and in doing so have had the opportunity to work within a variety of verticals.
@@ -30,7 +30,6 @@ description: "Listed below are professional engagements I've participated in dur
 			</p>
 		</div>
 	</section>
-	<hr/>
 	<section class="wg">
 		<div class="col-lg-4-16">
 			<figure class="logo">
@@ -55,7 +54,6 @@ description: "Listed below are professional engagements I've participated in dur
 			</figure>
 		</div>
 	</section>
-	<hr/>
 	<section class="wg">
 		<div class="col-lg-4-16">
 			<figure class="logo">
@@ -73,26 +71,28 @@ description: "Listed below are professional engagements I've participated in dur
 			<p>
 				Eric's largest projects were focused website feaure development for <a href="http://www.royalbuildingproducts.com/" target="_blank">Royal Building Products</a> and their subsidiary, <a href="http://celect.royalbuildingproducts.com/" target="_blank">Celect Cellular Exteriors</a>. Functional additions included the impiementation of internationalization options, responsive design framework, and CMS customizations.
 			</p>
-			<figure class="screen">
-				<a href="http://www.royalbuildingproducts.com/" target="_blank">
-					<img src="/img/portfolio/royal-building-products-homepage.jpg" alt="Royal Building Products" width="302" height="165" />
-				</a>
-				<figcaption class="small">
+			<div class="flex-spacearound">
+				<figure class="screen">
 					<a href="http://www.royalbuildingproducts.com/" target="_blank">
-						Royal Building Products
+						<img src="/img/portfolio/royal-building-products-homepage.jpg" alt="Royal Building Products" width="302" height="165" />
 					</a>
-				</figcaption>
-			</figure>
-			<figure class="screen">
-				<a href="http://celect.royalbuildingproducts.com/" target="_blank">
-					<img src="/img/portfolio/celect-homepage.jpg" alt="Celect Cellular Exteriors by Royal" width="302" height="165" />
-				</a>
-				<figcaption class="small">
+					<figcaption class="small">
+						<a href="http://www.royalbuildingproducts.com/" target="_blank">
+							Royal Building Products
+						</a>
+					</figcaption>
+				</figure>
+				<figure class="screen">
 					<a href="http://celect.royalbuildingproducts.com/" target="_blank">
-						Celect Cellular Exteriors by Royal
+						<img src="/img/portfolio/celect-homepage.jpg" alt="Celect Cellular Exteriors by Royal" width="302" height="165" />
 					</a>
-				</figcaption>
-			</figure>
+					<figcaption class="small">
+						<a href="http://celect.royalbuildingproducts.com/" target="_blank">
+							Celect Cellular Exteriors by Royal
+						</a>
+					</figcaption>
+				</figure>
+			</div>
 			<p>
 				Eric also architected high-traffic websites while also concentrating on performance optimization for media-rich user interfaces. These efforts included DEWALT's <a href="http://www.toolsofthebrave.com/">Tools of the Brave</a>, a site promoting the company's patriotism and US-based operations.
 			</p>
@@ -108,7 +108,6 @@ description: "Listed below are professional engagements I've participated in dur
 			</figure>
 		</div>
 	</section>
-	<hr/>
 	<section class="wg">
 		<div class="col-lg-4-16">
 			<figure>
@@ -135,7 +134,6 @@ description: "Listed below are professional engagements I've participated in dur
 			</figure>
 		</div>
 	</section>
-	<hr/>
 	<section class="wg">
 		<div class="col-lg-4-16">
 			<figure>
