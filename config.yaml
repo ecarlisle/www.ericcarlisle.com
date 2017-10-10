@@ -23,19 +23,20 @@ sitemap:
   priority: "0.5"
   filename: "sitemap.xml"
 params:
-  description: "Eric Carlisle is a UI Developer and UX Designer. His motto is KISS, to 'Keep it Stunningly Simple.'"
+  description: "Eric Carlisle is a UI Developer and UX Designer. His motto is KISS, to Keep iI Stunningly Simple."
+  keywords: ["Eric Carlisle", "UI Developer", "UX Designer", "User Interface", "User Experience"]
   DateForm: "Mon, Jan 2, 2006"
   headertitle:
     title: "Eric Carlisle"
     subtitle: "UI Developer, UX Designer"
   profile:
-    image: "/img/global/eric-carlisle-300x300.png"
+    image: "img/global/eric-carlisle-400x400.png"
     name: "Eric Carlisle"
     title: "UI Developer, UX Designer"
   organization:
     name: "Eric Carlisle Consulting"
     logo:
-      url: "assets/img/eric-carlisle-consuling-logo.png"
+      src: "img/eric-carlisle-consulting-logo.png"
       height: "60"
       width: "600"
   social:
@@ -44,6 +45,7 @@ params:
       appid: "616445445121972"
     twitter:
       username: "eric_carlisle"
+      cardtype: "article"
     instagram:
       username: "ericcarlisle"
     github:
