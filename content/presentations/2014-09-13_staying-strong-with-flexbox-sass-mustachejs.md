@@ -9,9 +9,7 @@ description: "Responsive design has revolutionized the way we create websites, y
 image:
   src: "img/presentations/the-new-ui.png"
   alt: "The New UI : Staying Strong with Flexbox, SASS, and Mustache.JS"
-  class: "blog-image"
-  align: "left"
-
+  class: "article-image"
 ---
 
 <p>

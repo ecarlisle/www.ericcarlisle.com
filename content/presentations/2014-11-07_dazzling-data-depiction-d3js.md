@@ -11,7 +11,7 @@ image:
   alt: "Dazzling Data Depiction with D3.js"
   width: "400"
   height: "300"
-  class: "presentation-image"
+  class: "article-image"
 ---
 
 <p>Creating data visualizations for a web has historically been a daunting task. Due to a lacking standards of browser-supported visualization, often the most approachable solutions would involve proprietary platforms, 3rd-party services, browser plugins, or just static imagery.</p>

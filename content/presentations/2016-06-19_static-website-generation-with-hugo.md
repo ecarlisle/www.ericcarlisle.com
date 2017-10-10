@@ -9,11 +9,11 @@ description: "The static website has been reborn!  Using a static site generator
 image:
   src: "img/presentations/fun-with-hugo.png"
   alt: "Flexible, Powerful Static Website Creation with Hugo"
-  class: "presentation-image"
+  class: "article-image"
 ---
 
 <p>
-	The static website has been reborn!  Using a static site generator can simplify website production, optimize performance, and improve security. By streamlining the production process, static site generators can make more time for creating content instead of maintaining the plumbing that delivers it.
+	The static website has been reborn! Using a static site generator can simplify website production, optimize performance, and improve security. By streamlining the production process, static site generators can make more time for creating content instead of maintaining the plumbing that delivers it.
 </p>
 <!-- more -->
 

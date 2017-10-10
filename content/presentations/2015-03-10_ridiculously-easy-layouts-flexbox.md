@@ -11,7 +11,7 @@ image:
   alt: "Ridiculously Easy Layouts with Flexbox"
   width: "400"
   height: "300"
-  class: "presentation-image"
+  class: "article-image"
 ---
 <p>
 	Ready to have your mind blown? Meet Flexbox! The Flexbox (or Flexible Box) Layout Model is a set of CSS attributes that will likely change the way you think about UI layouts. Flexbox uses a dual-axis, container/item layout model allowing for powerful approaches to element space distribution, alignment, and sizing. This can be a tremendous boon for web projects with dynamic data and design flux. It may also tremendously simplify responsive layouts that are dependent on commonly complicated grid models.

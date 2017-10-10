@@ -9,7 +9,7 @@ description: "This session will introduce Bower, a powerful package manager for 
 image:
   src: "img/presentations/bower-power.png"
   alt: "Bower Power : Supercharging Front-End Manageability"
-  class: "blog-image"
+  class: "article-image"
 ---
 
 <p>This session will introduce Bower, a powerful package manager for libraries, frameworks, and all things front-end. We will cover basic Bower usage, integration into Grunt &amp; Gulp build processes, tooling, and registering custom packages to be used by anyone.</p>
