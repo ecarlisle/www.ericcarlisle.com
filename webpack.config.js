@@ -109,12 +109,6 @@ module.exports = {
 		filename: './js/main.js',
 	},
 	watch: true,
-/*
-	devServer: {
-		inline: true,
-		contentBase: sourcePath,
-	},
-*/
 	devtool: 'source-map',
 	plugins: [
 		new CleanWebpackPlugin([cssPath, jsPath, fontPath], {}),
@@ -129,13 +123,5 @@ module.exports = {
 				warnings: false
 			}
 		}),
-//			{
-//				from: {
-//					glob: path.resolve(sourcePath, 'img') + '/**/*',
-//					to: path.resolve(buildPath, 'img'),
-//				},
-//			},
-//		]),
-
 	],
 };
