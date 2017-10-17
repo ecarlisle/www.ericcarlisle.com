@@ -17,6 +17,7 @@ const themeName = 'podium';
 // Paths
 const sourcePath = path.resolve(__dirname, 'themes', themeName, 'static');
 const buildPath = path.resolve(__dirname, 'static');
+const cleanPath = path.resolve(__dirname, 'site');
 const cssPath = path.resolve(buildPath, 'css');
 const jsPath = path.resolve(buildPath, 'js');
 const fontPath = path.resolve(buildPath, 'fonts');
@@ -43,7 +44,7 @@ module.exports = {
 							loader: 'css-loader',
 							options: {
 								sourceMap: false,
-								minimize: false,
+								minimize: true,
 								importLoaders: 2,
 							},
 						},
