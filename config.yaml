@@ -6,13 +6,15 @@ theme: "podium"
 author:
   name: "Eric Carlisle"
   email: "eric@ericcarlisle.com"
-languageCode: "en-US"
+language:
+  lang: "en"
+  languageName: "English"
 theme: "podium"
 canonifyURLs: true
 config: "config.toml"
 enableGitInfo: true
 enableRobotsTXT: true
-googleAnalytics: ""
+googleAnalytics: "UA-34545855-1"
 permalinks:
   blog: posts/:year/:month/:day/:slug/
   presentations: presentations/:year/:month/:day/:slug/
@@ -23,8 +25,9 @@ sitemap:
   priority: "0.5"
   filename: "sitemap.xml"
 params:
-  description: "Eric Carlisle is a UI Developer and UX Designer. His motto is KISS, to Keep iI Stunningly Simple."
+  description: "Eric Carlisle is a UI Developer and UX Designer. His motto is KISS, to Keep It Stunningly Simple."
   keywords: ["Eric Carlisle", "UI Developer", "UX Designer", "User Interface", "User Experience"]
+  locale: "en-US"
   DateForm: "Mon, Jan 2, 2006"
   headertitle:
     title: "Eric Carlisle"
@@ -41,7 +44,7 @@ params:
       width: "600"
   social:
     facebook:
-      admins: "eric.carlisle"
+      admins: "5412120"
       appid: "616445445121972"
     twitter:
       username: "eric_carlisle"
