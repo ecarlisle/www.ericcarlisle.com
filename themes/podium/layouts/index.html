@@ -1,13 +1,26 @@
 <!doctype html>
-<html lang="en-US">
+<html lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
 	{{ partial "head.html" . }}
 	<body itemscope itemtype="http://schema.org/WebPage">
+		{{ partial "facebook-sdk" . }}
+		{{ partial "google-tag-manager.html" . }}
 		{{ partial "header.html" . }}
 		<div class="page-container wg">
-			<aside class="page-profile col-md-3-16">
+			<aside class="page-profile col-md-4-16 col-lg-3-16 col-xl-3-16">
 				{{ partial "profile.html" . }}
 			</aside>
-			<main class="page-main col-md-12-16 col-lg-11-16">
+			<main class="page-main col-md-12-16 col-lg-11-16 col-xl-11-16">
+				<div class="home-intro">
+					<div class="clearfloat" style="font-size: 20px">
+						<!--
+						<h1>Hi, I'm Eric!</h1>
+						<div>I create user interfaces.</div>
+						<div>In doing so, I strive to provide excellent User Experiences.</div>
+						<div>People use websites to accomplish goals.</div>
+						<div>They should think about their goal without </div>
+						<div>I like people more than I like computers, so engaging them is important</div>-->
+					</div>
+				</div>
 				<ul id="content-roll" itemscope itemtype="http://schema.org/Blog">
 					{{ range .Data.Pages }}
 						{{ .Render "summary" }}
@@ -20,15 +33,7 @@
 		</div>
 		{{ partial "footer.html" . }}
 		<script src="{{ .Site.BaseURL }}js/main.js"></script>
+		{{ partial "breakpoint-debug-widget.html" . }}
 		{{ partial "google-analytics.html" . }}
 	</body>
-	<!--
-	<div id="responsive-debug">
-		<span class="xs">XS</span>
-		<span class="sm">SM</span>
-		<span class="md">MD</span>
-		<span class="lg">LG</span>
-		<span class="xl">XL</span>
-	</div>
-	-->
 </html>

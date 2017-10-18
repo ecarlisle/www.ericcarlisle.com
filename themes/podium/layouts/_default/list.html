@@ -1,13 +1,16 @@
 <!doctype html>
+{{ .Scratch.Add "isListPage" true }}
 <html lang="en-US">
 	{{ partial "head.html" . }}
 	<body itemscope itemtype="http://schema.org/WebPage">
+		{{ partial "facebook-sdk" . }}
+		{{ partial "google-tag-manager.html" . }}
 		{{ partial "header.html" . }}
 		<div class="page-container wg">
-			<aside class="page-profile col-md-3-16">
+			<aside class="page-profile col-md-4-16 col-lg-3-16 col-xl-3-16">
 				{{ partial "profile.html" . }}
 			</aside>
-			<main class="page-main col-md-12-16 col-lg-11-16">
+			<main class="page-main col-md-12-16 col-lg-11-16 col-xl-11-16">
 				<ul id="content-roll" itemscope itemtype="http://schema.org/Blog">
 					{{ range .Data.Pages }}
 						{{ .Render "summary" }}
@@ -20,6 +23,7 @@
 		</div>
 		{{ partial "footer.html" . }}
 		<script src="{{ .Site.BaseURL }}js/main.js"></script>
+		{{ partial "breakpoint-debug-widget.html" . }}
 		{{ partial "google-analytics.html" . }}
 	</body>
 </html>

@@ -5,32 +5,17 @@
 			{{ .Title }}
 		</h2>
 	</a>
-	<div class="article-meta">
-		<div class="author">
-			<time itemprop="datePublished"> {{ .Date.Format "Mon, Jan 2, 2006" }} </time>
-			<meta itemprop="dateModified" content="{{ .Date.Format "Mon, Jan 2, 2006" }}">
-		</div>
-		<div class="publish-date">
-			<span class="iblock" itemprop="author"> {{ $.Param "author" }} </h3>
-			<span itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-				<img src="{{ .Site.BaseURL }}{{ $.Param "image" }}" />
-				<meta name="width" content="{{ $.Param "image.width" }}" />
-				<meta name="height" content="{{ $.Param "image.height" }}" />
-				<meta itemprop="url" content="{{ .Site.BaseURL }}{{ $.Param "image.url" }}">
-			</span>
-		</div>
-	</div>
+	{{ partial "article-subtitle" . }}
 	<span itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-		<meta itemprop="name" content="{{ $.Site.Params.organization.name }}">
-		<span itemprop="logo"  itemscope itemtype="https://schema.org/ImageObject" content="{{ $.Site.Params.organization.logo }}">
-			<meta itemprop="url" content="{{ .Site.BaseURL }}{{ $.Param "image.url" }}">
-			<meta itemprop="width" content="{{ $.Site.Params.organization.logo.width }}">
-			<meta itemprop="height" content="{{ $.Site.Params.organization.logo.height }}">
+		<meta itemprop="name" content="{{ $.Site.Params.organization.name }}" />
+		<span itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+			<meta itemprop="url" content="{{ .Site.BaseURL }}{{ $.Site.Params.organization.logo.src }}" />
+			<meta itemprop="width" content="{{ $.Site.Params.organization.logo.width }}" />
+			<meta itemprop="height" content="{{ $.Site.Params.organization.logo.height }}" />
 		</span>
 	</span>
 	<div itemprop="articleBody">
 		{{ partial "image" . }}
-		{{ .Summary }}
+		{{ .Summary | safeHTML }}
 	</div>
 </article>
-<hr class="bmar3 tmar1" />

@@ -2,21 +2,23 @@
 <html lang="en-US">
 	{{ partial "head" . }}
 	<body itemscope itemtype="http://schema.org/WebPage">
-		{{ partial "header" . }}
+		{{ partial "facebook-sdk" . }}
+		{{ partial "google-tag-manager.html" . }}
+		{{ partial "header.html" . }}
 		<div class="page-container wg">
 			<aside class="page-profile col-md-3-16">
 				{{ partial "profile.html" . }}
 			</aside>
-			<main class="page-main col-md-9-16">
+			<main class="page-main col-md-11-16">
 				<article>
 					<header>
 						<h1>
 							{{ .Title }}
 						</h1>
-						<div class="postdate">
-							{{ .Date.Format "Monday Jan 2, 2006" }}
-						</div>
+						{{ partial "article-subtitle" . }}
 					</header>
+					<div class="bmar1">
+					</div>
 					<div class="blog-post clearfix">
 						{{ partial "image" . }}
 						{{ .Content }}
@@ -30,6 +32,8 @@
 		</div>
 		{{ partial "footer" . }}
 		<script src="{{ .Site.BaseURL }}js/main.js"></script>
-		{{ partial "google-analytics" . }}
+		{{ partial "breakpoint-debug-widget.html" . }}
+		<script id="dsq-count-scr" src="//carlisle.disqus.com/count.js" async></script>
+		{{ partial "google-analytics.html" . }}
 	</body>
 </html>

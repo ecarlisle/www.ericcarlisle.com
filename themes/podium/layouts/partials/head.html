@@ -1,46 +1,98 @@
 {{ $appleIconSizes := (slice 57 72 76 114 120 144 152 180) }}
+{{ $.Scratch.Add "keywords" "" }}
+{{ $.Scratch.Add "description" "" }}
+{{ $.Scratch.Add "twitterCard" "" }}
+{{ $.Scratch.Add "pageImage" "" }}
+{{ $.Scratch.Add "pageTitle" "" }}
+
+{{ if .IsHome }}
+	{{ $.Scratch.Set "description" .Site.Params.description }}
+	{{ $.Scratch.Set "keywords" (delimit .Site.Params.keywords ", ") }}
+	{{ $.Scratch.Set "twitterCard" .Site.Params.social.twitter.cardtype }}
+	{{ $.Scratch.Set "pageImage" (print .Site.BaseURL .Site.Params.profile.image) }}
+	{{ $.Scratch.Set "pageTitle" (print .Title) }}
+{{ else }}
+	{{ $.Scratch.Set "description" .Params.description }}
+	{{ $.Scratch.Set "keywords" .Params.keywords }}
+	{{ $.Scratch.Set "twitterCard"  .Params.twitter.cardtype }}
+	{{ $.Scratch.Set "pageImage" (print .Site.BaseURL .Params.image.src) }}
+	{{ $.Scratch.Set "pageTitle" (print .Title " | " .Site.Title ) }}
+{{ end }}
+
+{{ $keywords := $.Scratch.Get "keywords" }}
+{{ $description := $.Scratch.Get "description" }}
+{{ $twitterCard := $.Scratch.Get "twitterCard" }}
+{{ $pageImage := $.Scratch.Get "pageImage" }}
+{{ $pageTitle := $.Scratch.Get "pageTitle" }}
+{{ $randNum := mul now.Nanosecond now.Second }}
 <head>
-	<!-- General Metadata -->
-	<title>{{ .Title }}</title>
+
+	{{ "<!-- DNS Prefetch -->" | safeHTML }}
+	<meta http-equiv="x-dns-prefetch-control" content="on">
+	<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+
+	{{ "<!-- Google Tag Manager -->" | safeHTML }}
+	<!--
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-5XHZVF');</script>
+	-->
+
+	{{ "<!-- General Metadata -->" | safeHTML }}
+	<title>{{ $pageTitle }}</title>
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="{{ .Params.description }}">
+	<meta name="description" content="{{ $description }}">
+	<meta name="keywords" content="{{ $keywords }}">
 	<meta name="robots" content="index, follow">
 	<link rel="canonical" href="{{ .Permalink }}">
 	<link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ .Site.BaseURL }}/index.xml">
-	{{ if .Site.Params.social.twitter }}
-	<!-- Twitter Metadata -->
-	<meta name="twitter:card" content="{{ .Params.social.twitter.cardtype }}">
-	<meta name="twitter:site" content="{{ .Site.Params.social.twitter.username }}">
-	<meta name="twitter:creator" content="{{ .Site.Params.social.twitter.username }}">
-	<meta name="twitter:title" content="{{ .Title }}">
-	<meta name="twitter:description" content="{{ .Params.description }}">
-	<meta name="twitter:image" content="{{ .Params.largeimage }}">
-	<meta name="twitter:url" property="og:url" content="{{ .Permalink }}">
-	{{ end }}
 	{{ if .Site.Params.social.facebook }}
-	<!-- Open Graph Metadata -->
+	{{ "<!-- Open Graph Metadata -->" | safeHTML }}
+	<meta property="og:locale" content="{{ .Site.Params.Locale }}" />
+	<meta property="og:type" content="website">
 	<meta property="og:title" content="{{ .Title }}">
-	<meta property="og:description" content="{{ .Description }}">
-	<meta property="og:image" content="{{ .Params.largeimage }}">
 	<meta property="og:url" content="{{ .Permalink }}">
+	<meta property="og:site_name" content="{{ .Site.Title }}" />
+	<meta property="og:image" content="{{ $pageImage }}">
+	<meta property="og:description" content="{{ $description }}">
 	<meta property="og:type" content="{{ .Params.social.facebook.pagetype }}" />
-	<meta property="og:site_name" content="{{ .Title }}" />
-	<meta property="og:locale" content="{{ .Site.Params.locale }}" />
 	<meta property="fb:app_id" content="{{ .Site.Params.social.facebook.appid }}" />
 	<meta property="fb:admins" content="{{ .Site.Params.social.facebook.admins }}" />
+	{{ end }}{{ if .Site.Params.social.twitter }}
+	{{ "<!-- Twitter Metadata -->" | safeHTML }}
+	<meta name="twitter:card" content="{{ $twitterCard }}">
+	<meta name="twitter:title" content="{{ $pageTitle }}">
+	<meta name="twitter:site" content="{{ .Site.Params.social.twitter.username }}">
+	<meta name="twitter:creator" content="{{ .Site.Params.social.twitter.username }}">
+	<meta name="twitter:description" content="{{ $description }}">
+	<meta name="twitter:image" content="{{ $pageImage }}">
+	<meta name="twitter:url" property="og:url" content="{{ .Permalink }}">
+	<link rel="me" href="https://twitter.com/{{ .Site.Params.social.twitter.username }}">
 	{{ end }}
-	<!-- Site CSS -->
-	<link rel="stylesheet" href="{{ .Site.BaseURL }}css/main.css">
-	<!-- Icons -->
+	{{ "<!-- Google metadata -->" | safeHTML }}
+	<meta name="google" content="nositelinkssearchbox" />
+	<meta name="google-site-verification" content="79WFC1AAO_g6X17NBDa1J0yiQJlas4v8hS69Ihw8M7Q" />
+
+	{{ "<!-- Microsoft metadata -->" | safeHTML }}
+	<meta name="msvalidate.01" content="74F5AA76B53AEFD6E86FE91470A50E0B" />
+
+	{{ "<!-- Icons -->" | safeHTML }}
 	<link rel="shortcut icon" href="{{ .Site.BaseURL }}/favicon.ico" type="image/x-icon" />
 	<link rel="apple-touch-icon" href="{{ .Site.BaseURL }}/apple-touch-icon.png" />
-	{{ range $appleIconSizes }}
-	<link rel="apple-touch-icon" sizes="{{ . }}x{{ . }}" href="/apple-touch-icon-{{ . }}x{{ . }}.png" />
+	{{ range $appleIconSizes }}<link rel="apple-touch-icon" sizes="{{ . }}x{{ . }}" href="/apple-touch-icon-{{ . }}x{{ . }}.png" />
+	{{ end }}{{ if .RSSLink }}
+	{{ "<!-- RSS -->" | safeHTML }}
+	<link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+	<link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
 	{{ end }}
-	<!-- Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400|Roboto:300,400,700|Exo+2:300" rel="stylesheet">
+	{{ "<!-- CSS -->" | safeHTML }}
+	<link type="text/css" rel="stylesheet" href="{{ .Site.BaseURL }}css/main.css?{{ $randNum }}">
+	<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400|Roboto:400,700|Roboto+Slab|Montserrat:400&{{ $randNum }}">
+
 	<script type="application/ld+json">
 		{
 			"@context": "http://schema.org",
@@ -48,9 +100,10 @@
 			"url": "https://www.ericcarlisle.com/",
 			"potentialAction": {
 				"@type": "SearchAction",
-				"target": "https://search.ericcarlisle.com/search?q={search_term_string}",
+				"target": "https://www.ericcarlisle.com/search?q={search_term_string}",
 				"query-input": "required name=search_term_string"
 			}
 		}
 	</script>
+
 </head>

@@ -1,15 +1,32 @@
-<header class="wg page-header" itemscope itemtype="http://schema.org/WPHeader">
-	<a class="col-md-7-16 col-lg-8-16 title" href="/">
-		<span class="name">Eric Carlisle :</span>
-		<span class="job">UI Developer, UX Designer</span>
-	</a>
-	<nav class="page-navigation col-md-9-16 col-lg-8-16" itemscope itemtype="http://schema.org/SiteNavigationElement">
-		<img src="/img/global/hamburger-icon.svg" class="hamburger" alt="Mobile Menu" />
+<header class="page-header" itemscope itemtype="http://schema.org/WPHeader">
+	<div class="header-title">
+		<a href="/">
+			<span class="name">Eric Carlisle :</span>
+			<span class="job">UI Developer, UX Designer</span>
+		</a>
+		<span class="hamburger-menu">&#9776;</span>
+		<div class="google-custom-search">
+			<script>
+				(function() {
+					var cx = '013258219452007524330:bpqssbemzkk';
+					var gcse = document.createElement('script');
+					gcse.type = 'text/javascript';
+					gcse.async = true;
+					gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+					var s = document.getElementsByTagName('script')[0];
+					s.parentNode.insertBefore(gcse, s);
+				})();
+			</script>
+			<gcse:search></gcse:search>
+		</div>
+
+	</div>
+	<nav class="page-navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 		<ul>
 		{{ $currentNode := . }}
 		{{ range .Site.Menus.main }}
 			<li>
-				<a class="sidebar-nav-item{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }} active{{end}}" href="{{.URL}}">
+				<a class="{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }} active{{end}}" href="{{.URL}}">
 					{{ .Name }}
 				</a>
 			</li>

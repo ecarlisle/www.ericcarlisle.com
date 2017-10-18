@@ -1,14 +1,28 @@
 {{ $img := .Params.image }}
-{{ with $img.caption }}
+
+
+{{/* TODO : Get rid of this hack to determine image host. */}}
+{{ $.Scratch.Add "hostname" "" }}
+{{ $.Scratch.Add "imagePrefix" "" }}
+{{ $.Scratch.Set "hostname" (findRE "https?://localhost" .Permalink) }}
+{{ $hostname := ($.Scratch.Get "hostname") }}
+{{ if (len $hostname) gt 0 }}
+	{{ $.Scratch.Set "imagePrefix" "http://localhost:1313/" }}
+{{ else }}
+	{{ $.Scratch.Set "imagePrefix" "http://www.ericcarlisle.com/" }}
+{{ end }}
+{{ $imagePrefix := ($.Scratch.Get "imagePrefix") }}
+
+{{ with $img }}
 <figure itemprop="image"
 		itemscope
 		itemtype="http://schema.org/ImageObject"
 		{{ with $img.class }}class="{{ . }}"{{ end }}>
-	<a href="{{ .Permalink }}">
-	<img src="{{ .Site.BaseURL }}{{ $img.src }}" alt="{{ $img.alt }}"  />
-	<meta itemprop="caption" content="{{ $img.alt }}" />
-	<meta itemprop="contentUrl" content="{{ .Site.BaseURL }}{{ $img.src }}" />
-	</a>
+		<img src="{{ $imagePrefix }}{{ $img.src }}" alt="{{ $img.alt }}" />
+		<meta itemprop="caption" content="{{ $img.alt }}">
+		<meta itemprop="url" content="{{ $imagePrefix }}{{ $img.src }}">
+		{{ with $img.width }}<meta itemprop="width" content="{{ . }}">{{ end }}
+		{{ with $img.height }}<meta itemprop="width" content="{{ . }}">{{ end }}
 	{{ with $img.caption }}<figcaption itemprop="caption">{{.}}</figcaption>{{ end }}
 </figure>
 {{ end }}

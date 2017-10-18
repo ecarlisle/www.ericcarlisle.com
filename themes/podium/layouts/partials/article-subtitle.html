@@ -1,0 +1,40 @@
+	<div class="article-subtitle">
+		<ul class="meta">
+			<li>
+				{{ if eq .Section "blog" }}
+				Blog Post
+				{{ else if eq .Section "presentations" }}
+				Presentation
+				{{ end }}
+			</li>
+			<li>&middot;</li>
+			<li>
+				<time itemprop="datePublished">{{ .Date.Format "Mon, Jan 2, 2006" }}</time>
+				<meta itemprop="dateModified" content="{{ .Date.Format "Mon, Jan 2, 2006" }}" />
+			</li>
+			<li>&middot;</li>
+			<li>
+				<span class="iblock" itemprop="author">{{ $.Param "author" }}</span>
+				<span itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+					<meta name="width" content="{{ $.Param "image.width" }}" />
+					<meta name="height" content="{{ $.Param "image.height" }}" />
+					<meta itemprop="url" content="{{ .Site.BaseURL }}{{ $.Param "image.url" }}" />
+				</span>
+			</li>
+		</ul>
+		<!-- AddToAny BEGIN -->
+		<div class="a2a_kit a2a_default_style">
+			{{ if eq (.Scratch.Get "isListPage") true }}
+			<!--
+			<a class="a2a_button_twitter"></a>
+			<a class="a2a_button_linkedin"></a>
+			<a class="a2a_button_facebook"></a>
+			<a class="a2a_button_google_plus"></a>
+			-->
+			<!-- <a class="a2a_button_copy_link"></a> -->
+			<!-- <a class="a2a_dd" href="https://www.addtoany.com/share"></a> -->
+			{{ end }}
+		</div>
+		<script async src="https://static.addtoany.com/menu/page.js"></script>
+		<!-- AddToAny END -->
+	</div>
