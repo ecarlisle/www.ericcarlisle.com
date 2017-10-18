@@ -10,6 +10,8 @@ Eric Carlisle : UI Developer, UX Designer
 @import 'sidebar';
 @import 'components';
 @import 'footer';
+@import 'navigation';
+@import 'overrides';
 
 *, *:after, *:before {
 	box-sizing: border-box;
@@ -20,13 +22,14 @@ html {
 }
 
 body {
-	background: $white;
+	background: $lightest-gray;
 	color: $dark-gray;
 	font-family: $content-font-stack;
 	font-size: 1.6rem;
 	font-weight: 300;
 	line-height: 3rem;
-	margin: 0;
+	margin: 0 auto;
+	max-width: 200rem;
 	padding: 0;
 }
 
@@ -51,43 +54,41 @@ h1, h2, h3 {
 	font-weight: 400;
 }
 
-h1 {
-	border-bottom: solid 1px $dark-gray;
-	font-size: 2rem;
+
+h1, h2 {
+	font-size: 1.8rem;
 	line-height: 3rem;
-	@include bp(md) {
-		font-size: 3rem;
-		padding-bottom: 1rem;
+	margin: 0 0 1.5rem 0;
+	@include bp(sm) {
+		font-size: 2.0rem;
+		line-height: 3.2rem;
 	}
-}
-
-h2 {
-//	font-size: 2.6rem;
-//	line-height: 3rem;
-	font-size: 2rem;
-	line-height: 3rem;
-	margin-top: 2rem;
-
+	@include bp(md) {
+		font-size: 2.2rem;
+	}
+	@include bp(lg) {
+		font-size: 2.4rem;
+	}
 	@include bp(lg) {
 		font-size: 2.6rem;
 	}
 }
 
-
 h3 {
-//	font-size: 2rem;
-//	line-height: 1rem;
-//	margin: 3rem 0 1rem;
 	font-size: 2rem;
-	line-height: 2.5rem;
+	margin: 0;
 }
 
-.postdate {
-	font-family: $content-font-stack;
-}
-
-h1, h2 {
-	margin: 0 0 1rem;
+.page-container {
+	@include bp(md) {
+		padding-top: 1rem;
+	}
+	@include bp(md) {
+		padding-top: 2rem;
+	}
+	@include bp(lg) {
+		padding-top: 3rem;
+	}
 }
 
 hr {
@@ -105,22 +106,7 @@ div.highlight {
 	}
 }
 
-.social-icons {
-	a {
-		border-radius: 3px;
-		height: 38px;
-		width: 38px;
-		display: inline-block;
-		padding: 5px;
-		&:hover {
-			background-color: #e5e5e5;
-		}
-		img {
-			height: 28px;
-			width: 28px;
-		}
-	}
-}
+
 
 .gist-data {
 	max-height: 45rem;

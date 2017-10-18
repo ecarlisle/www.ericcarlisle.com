@@ -1,97 +1,57 @@
 // ----- Header & Title ----- //
 header.page-header {
 	background: $dark-blue;
+	color: $light-blue;
 	font-family: $header-footer-font-stack;
-	font-weight: 300;
-	padding: 0.5rem 0 0.5rem 3rem;
-	margin-bottom: 1rem;
-	text-transform: uppercase;
-
-	@include bp(md) {
-		padding: 1rem;
-	}
+	line-height: 1;
 
 	a {
-		color: $white;
+		color: $light-blue;
 	}
 
-	>.title {
-		font-size: 1.5rem;
-		&:hover, &:active, &:focus, {
-			text-decoration: none;
+	.header-title {
+		display: flex;
+		align-items: center;
+		font-size: 1.6rem;
+		justify-content: space-between;
+		padding: 0;
+		padding: 2rem 0 2rem 1rem;
+		@include bp(sm) {
+			font-size: 2rem;
+		}
+		@include bp(md) {
+			font-size: 2.4rem;
+			padding: 2rem 0 2rem 2rem;
 		}
 		@include bp(lg) {
-			padding-top: 1.2rem;
-			.name {
-				font-size: 2rem;
-			}
-			.job {
-				font-size: 1.8rem;
-			}
+			font-size: 3rem;
+		}
+
+		a:hover {
+			text-decoration: none;
 		}
 	}
-}
 
-// ----- Main Navigation ----- //
-nav.page-navigation {
-	display: inline-block;
-	padding: 0;
-	position: absolute;
-	@include bp(md) {
-		position: static;
-		display: flex;
-		justify-content: flex-end;
-	}
-	@include bp(lg) {
-		padding: 1.6rem;
-	}
-	top: 0.8rem;
-	left: 1rem;
-	img.hamburger {
-		width: 1.6rem;
-		height: auto;
-		margin: 0;
-	}
-
-	@include bp(md) {
-		img.hamburger {
+	.hamburger-menu {
+		cursor: pointer;
+		float: right;
+		padding-right: 1rem;
+		@include bp(sm) {
 			display: none;
 		}
 	}
 
-	ul {
-		background: #64727e; // TODO
+	.google-custom-search {
 		display: none;
-		list-style-type: none;
-		margin: 0;
-		max-width: 20rem;
-		padding: 1rem 2rem;
 		@include bp(md) {
-			display: flex;
-			font-size: 1.4rem;
-			max-width: 100%;
-			padding: 0;
+			display: block;
+			max-width: 28rem;
 		}
-		li {
-			margin: 0;
-			padding: 0 0 1rem 1.5rem;
-			a:hover, a.active {
-				text-decoration: underline;
-			}
-			@include bp(md) {
-				padding: 0 0 0 1rem;
-			}
+		@include bp(lg) {
+			max-width: 30rem;
 		}
 
-		@include bp(md) {
-			background: transparent;
-			display: inline-block;
-			li {
-				display: inline-block;
-			}
-		}
 	}
-
-
 }
+
 

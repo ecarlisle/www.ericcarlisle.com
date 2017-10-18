@@ -1,7 +1,11 @@
 footer.page-footer {
 	font-family: $header-footer-font-stack; //TODO
-	font-size: 1.8rem;
-	margin: 2rem 0 0 0;
-	padding: 1rem;
+	font-size: 1.4rem;
+	margin: 0;
+	padding: 0 3rem 2rem 3rem;
 	text-align: right;
+
+	.div {
+		border: solid 1px red;
+	}
 }

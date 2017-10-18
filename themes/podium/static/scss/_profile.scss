@@ -1,13 +1,15 @@
 // ----- Page Profile ----- //
 aside.page-profile {
 	align-items: center;
-	border-bottom: solid 1px $dark-blue;
-	padding: 0.5rem 2rem;
+	padding: 0 1rem;
 	display: flex;
-	margin: 0 0 1rem 0;
+
+	.name-title {
+		font-family: Montserrat, Serif; // TODO
+		margin: 0.5rem 0;
+	}
 
 	@include bp(md) {
-		border-bottom: 0;
 		display: block;
 	}
 
@@ -15,31 +17,24 @@ aside.page-profile {
 		text-align: center;
 		display: inline-block;
 		img.headshot {
+			border: solid 2px white;
 			display: none;
 			height: auto;
+			margin: 0;
 
-			@include bp(sm) {
-				border-radius: 0.5rem;
-				display: inline-block;
-				max-width: 7rem;
-
-			}
 			@include bp(md) {
 				border-radius: 1rem;
+				display: inline-block;
 				max-width: 100%;
 			}
 		}
 
 		figcaption {
 			display: none;
-			@include bp(lg) {
+			line-height: 2.2rem;
+			margin: 0;
+			@include bp(md) {
 				display: block;
-				span {
-					display: block;
-					@include bp(xl) {
-						display: inline;
-					}
-				}
 			}
 		}
 	}
@@ -48,28 +43,36 @@ aside.page-profile {
 		display: flex;
 		justify-content: space-around;
 		list-style-type: none;
-		margin: 0 3rem;
+		margin: 2rem 0 1rem 0;
 		padding: 0;
-		text-align: center;
 		width: 100%;
+		@include bp(sm) {
+			margin: 2rem 1rem 1rem 1rem;
+		}
 		@include bp(md) {
-			margin: 0;
-			display: block;
+			justify-content: space-around;
+			margin: 1rem 0 0 0;
 		}
 		li {
 			display: inline-block;
+			grow: 1;
 		}
 		img {
 			height: auto;
-			width: 2rem;
+			width: 2.6rem;
 			@include bp(sm) {
-				width: 3rem;
-			}
-			@include bp(md) {
-				width: 2rem;
+				width: 3.2rem;
 			}
 			@include bp(md) {
 				width: 2.4rem;
+			}
+
+			@include bp(lg) {
+				width: 2.6rem;
+			}
+
+			@include bp(xl) {
+				width: 3rem;
 			}
 		}
 	}

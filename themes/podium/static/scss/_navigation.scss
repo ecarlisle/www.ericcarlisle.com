@@ -1,0 +1,50 @@
+// ----- Main Navigation ----- //
+nav.page-navigation {
+	background: $med-blue;
+	border: solid 2px white;
+	border-width: 2px 0;
+	display: none;
+	font-size: 1.4rem;
+
+	@include bp(sm) {
+		display: block;
+		text-align: right;
+	}
+
+	a {
+		color: $lightest-blue;
+		display: inline-block;
+		height: 100%;
+		padding: 1.2rem 2rem;
+		&.active {
+			background: $white;
+			color: $med-blue;
+			text-decoration: underline;
+		}
+	}
+
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		width: 100%;
+		@include bp(sm) {
+			display: flex;
+			font-size: 1.4rem;
+			justify-content: space-around;
+			max-width: 100%;
+			padding: 0;
+		}
+		@include bp(md) {
+			display: block;
+			text-align: right;
+		}
+		li {
+			font-family: Montserrat, Serif; // TODO
+			@include bp(sm) {
+				display: inline-block;
+			}
+		}
+	}
+}

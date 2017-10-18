@@ -1,67 +1,143 @@
 #content-roll {
 	font-weight: 400;
 	padding: 0;
-	margin: 1rem 0 0 0;
+	margin: 0;
+}
 
-	.article-meta {
-		margin: 0 0 2rem 0;
-		>div {
-			background: #ddd;
-			border-radius: 0.3rem;
-			display: inline-block;
-			line-height: 1;
-			margin-right: 1rem;
-			padding: 5px;
-		}
+article {
+	background: #fff;
+	border: solid 1px $light-gray;
+	border-radius: 0.5rem;
+	font-size: 1.6rem;
+	margin-bottom: 1rem;
+	padding: 2rem 3rem 2rem 2rem;
+	@include bp(md) {
+		border: solid 2px $light-gray;
+		border-radius: 1rem;
+		margin-bottom: 2rem;
+		padding: 2rem 3rem 2rem 2rem;
+	}
+	@include bp(lg) {
+		margin-bottom: 3rem;
 	}
 
 	figure {
+		display: block;
 		text-align: center;
 		img {
-			display: inline-block;
-			max-width: 70%;
 			height: auto;
-			margin: 1rem 0;
+			margin: 2rem 0 0 0;
+			max-width: 30rem;
 
 			@include bp(md) {
+				display: inline-block;
 				float: right;
 				margin: 1rem 0 2rem 3rem;
-				max-width: 30rem;
 			}
 		}
-
 	}
 }
 
-/*
-.blog-image {
-//	float: right;
-	text-align: center;
-	img {
-		display: block;
-		max-width: 70%;
-		height: auto;
+.article-subtitle {
+	color: $gold;
+	display: flex;
+	font-family: 'Roboto Slab';
+	font-size: 1.3rem;
+	flex-direction: column;
+	@include bp(sm) {
+		flex-direction: row;
+		justify-content: space-between;
+		font-size: 1.6rem;
 	}
-	margin: 0 2rem;
-}
-
-.presentation-image {
-	float: right;
-	img {
-		height: auto;
-		max-width: 100%;
+	justify-content: space-between;
+	line-height: 1;
+	padding: 1rem 0 1.8rem 0;
+	@include bp(sm) {
+		padding: 0;
 	}
-	margin: 0 2rem;
+	@include bp(md) {
+		border-bottom: solid 1px $light-gray;
+		padding-bottom: 1rem;
+	}
+	>ul {
+		display: flex;
+		justify-content: space-between;
+		@include bp(sm) {
+			justify-content: flex-start;
+		}
+		padding: 0;
+		margin: 0;
+		>li {
+			list-style-type: none;
+			@include bp(sm) {
+				padding-right: 1rem;
+			}
+			@include bp(lg) {
+				padding-right: 1.6rem;
+			}
+		}
+	}
+	.a2a_kit {
+		margin: 0 auto;
+		margin-top: 2rem;
+		@include bp(sm) {
+			margin: 0;
+		}
+	}
 }
-*/
 
 .section-title {
 	background-color: $dark-blue;
 	border-radius: 0.3rem;
-	color: $white;
+	color: $lightest-gray;
 	font-size: 1.6rem;
 	margin: 1rem 0;
 	padding: 0.5rem 2rem;
 	text-transform: uppercase;
+}
+
+
+// TODO : Clean this up!
+article.portfolio {
+	>section {
+		@include bp(lg) {
+			display: flex;
+		}
+		>div {
+			float: left;
+			&.engagement {
+				width: 30%;
+				padding-right: 0rem;
+				padding-top: 4.5rem;
+				text-align: right;
+			}
+			&.content {
+				width: 70%;
+				figcaption {
+					text-align: center;
+				}
+
+			}
+		}
+		figure {
+
+			&.logo {
+				display: inline-block;
+				margin: 0 2rem 0 0;
+				text-align: right;
+			}
+			a {
+				display: block;
+			}
+			img {
+				float: none;
+				margin: 0;
+				max-width: 100%;
+			}
+		}
+		figcaption {
+			font-size: 1.3rem;
+		}
+	}
 }
 

@@ -37,6 +37,11 @@
 	font-size: 1.3rem;
 }
 
+.flex-spacearound {
+	display: flex;
+	justify-content: space-around;
+}
+
 // Padding adjusters
 @for $i from 0 through 3 {
 	.pad#{$i} { padding: #{$i}rem; }

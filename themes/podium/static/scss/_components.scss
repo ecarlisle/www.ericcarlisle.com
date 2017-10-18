@@ -58,9 +58,9 @@ ul.presentation-resource-list {
 		}
 	}
 	figure.screen {
-		display: inline-block;
-		width: 100%;
+		display: block;
 		text-align: center;
+		border: solid 1px red;
 		figcaption {
 			font-size: 13px;
 		}
