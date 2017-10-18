@@ -11,12 +11,10 @@ image:
   alt: "Flexible, Powerful Static Website Creation with Hugo"
   class: "article-image"
 ---
-
 <p>
 	The static website has been reborn! Using a static site generator can simplify website production, optimize performance, and improve security. By streamlining the production process, static site generators can make more time for creating content instead of maintaining the plumbing that delivers it.
 </p>
 <!-- more -->
-
 <p>
 	Written in Go, the Hugo static site generator (SSG) is very fast and built for performance. What also makes it stand out is an extremely powerful, flexible content model. Content may be presented and filtered by structural heirarchy, type of content, or archetypal taxonomies. Page-specific configuration is achieved via Frontmatter, a metadata format read by Hugo in YAML, TOML, or JSON. Hugo also has a highly customizable, modular templating model with a complementary theming capability.
 </p>
