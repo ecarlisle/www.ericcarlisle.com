@@ -18,12 +18,12 @@ if ($('.image-gallery').length) {
 }
 
 function toggleMobileNavigation() {
-	$('.page-header nav ul').toggle();
+	$('nav.page-navigation').toggle('drop');
 }
 
 
 function bindEventHandlers() {
-	$('.page-header .hamburger').on('click', toggleMobileNavigation);
+	$('.hamburger-menu').on('click', toggleMobileNavigation);
 }
 
 
