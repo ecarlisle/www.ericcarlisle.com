@@ -6,19 +6,21 @@ date: 2017-09-25 06:00:00
 tags: ["eric carlisle", "portfolio"]
 description: "Listed below are professional engagements I've participated in during the last few years. I've spent much of my career as a consultant and in doing so have had the opportunity to work within a variety of verticals."
 ---
-<article id="content-roll" class="portfolio">
+<article class="portfolio">
 	<h1>Portfolio</h1>
 	<p>
 		Listed below are professional engagements I've participated in during the last few years. I've spent much of my career as a consultant and in doing so have had the opportunity to work within a variety of verticals.
 	</p>
-	<section class="wg">
-		<div class="col-lg-4-16">
+	<section>
+		<div class="engagement">
 			<figure class="logo">
-				<img src="/img/portfolio/lookingglass.png" alt="LookingGlass Cyber Solutions" />
+				<a href="https://www.lookingglasscyber.com/" target="_blank">
+					<img src="/img/portfolio/lookingglass.png" alt="LookingGlass Cyber Solutions" />
+				</a>
 				<figcaption><strong>Engagement:</strong> Full-Time, 3/2014 - 3/2015</figcaption>
 			</figure>
 		</div>
-		<div class="col-lg-12-16">
+		<div class="content">
 			<h3>LookingGlass Cyber Solutions</h3>
 			<p>
 				<a href="https://www.lookingglasscyber.com/" target="_blank">Lookingglass Cyber Solutions</a> transforms cyber-threat intelligence into threat knowledge using the ScoutPlatform<sup>TM</sup> platform of products, including ScoutVision<sup>TM</sup>, CloudScout<sup>TM</sup>, and ScoutInterxect<sup>TM</sup>. At Lookingglass, Eric served as a UI &amp; UX Architect and UI team lead. By using insight both customers and subject matter experts, he selected the UI patterns, UX workflows, and implementation technology to make tremendous amount of changing threat data both understandable and useful.
@@ -30,14 +32,14 @@ description: "Listed below are professional engagements I've participated in dur
 			</p>
 		</div>
 	</section>
-	<section class="wg">
-		<div class="col-lg-4-16">
+	<section>
+		<div class="engagement">
 			<figure class="logo">
 				<img src="/img/portfolio/eugene-bell-foundation.png" alt="Eugene Bell Foundation" />
 				<figcaption><strong>Engagement:</strong> Contract, 10/2014 - 2/2015</figcaption>
 			</figure>
 		</div>
-		<div class="col-lg-12-16">
+		<div class="content">
 			<h3>Eugene Bell Foundation</h3>
 			<p>
 				The Eugene Bell Foundation provides medical humanitarian assistance to rural North Korea, focusing on multidrug-resistant tuberculosis. In a collaborative effort with <a href="http://www.6712creative.com/" target="_blank">6712 Creative</a>, Eric created a responsive site with <a href="http://www.getbootstrap.com" target="_blank">Bootstrap</a> and <a href="http://www.wordpress.com" target="_blank">Wordpress</a> for the foundation's US presense. The site promotes the foundation's mission while serving as a means for fundraising efforts.
@@ -54,22 +56,24 @@ description: "Listed below are professional engagements I've participated in dur
 			</figure>
 		</div>
 	</section>
-	<section class="wg">
-		<div class="col-lg-4-16">
+	<section>
+		<div class="engagement">
 			<figure class="logo">
-				<img src="/img/portfolio/planit.png" alt="Planit Logo" />
+				<a href="http://www.planitagency.com/" target="_blank">
+					<img src="/img/portfolio/planit.png" alt="Planit Logo" />
+				</a>
 				<figcaption class="small">
 					<strong>Engagement:</strong> Contract, 8/2013 – 3/2014
 				</figcaption>
 			</figure>
 		</div>
-		<div class="col-lg-12-16">
+		<div class="content">
 			<h3>Planit</h3>
 			<p>
 				Planit is a strategic, digitally minded agency whose offerings are offerings are designed around the convergence of three collaborative service groups: Strategic Services, Creative Services, and Client Services. Eric contracted with Planit's Creative Serivces team as a full-stack developer.
 			</p>
 			<p>
-				Eric's largest projects were focused website feaure development for <a href="http://www.royalbuildingproducts.com/" target="_blank">Royal Building Products</a> and their subsidiary, <a href="http://celect.royalbuildingproducts.com/" target="_blank">Celect Cellular Exteriors</a>. Functional additions included the impiementation of internationalization options, responsive design framework, and CMS customizations.
+				Eric's largest projects were focused website feaure development for <a href="http://www.royalbuildingproducts.com/" target="_blank">Royal Building Products</a> and their subsidiary, <a href="http://celect.royalbuildingproducts.com/" target="_blank">Celect Cellular Exteriors</a>. Functional additions included the implementation of internationalization options, responsive design framework, and CMS customizations.
 			</p>
 			<div class="flex-spacearound">
 				<figure class="screen">
@@ -108,16 +112,18 @@ description: "Listed below are professional engagements I've participated in dur
 			</figure>
 		</div>
 	</section>
-	<section class="wg">
-		<div class="col-lg-4-16">
-			<figure>
-				<img src="/img/portfolio/idfive-logo.jpg" alt="idfive" />
+	<section>
+		<div class="engagement">
+			<figure class="logo">
+				<a href="http://idfive.com/" target="_blank">
+					<img src="/img/portfolio/idfive-logo.jpg" alt="idfive" />
+				</a>
 				<figcaption class="small">
 					<strong>Engagement:</strong> Full-Time, 4/2013 - 8/2013
 				</figcaption>
 			</figure>
 		</div>
-		<div class="col-lg-12-16">
+		<div class="content">
 			<h3>idfive</h3>
 			<p>
 				idfive is an agency providing media strategies, integrated advertising, website design/development, social media, and mobile web. Eric Lead, mentor, and managed idfive's development team while engaged on developing <a href="http://www.academbot.com" target="_blank">Academbot</a>, a search tool allowing students to find potential matches in higher education. Contributions included implementation of a Bootstrap responsive layout, UX design, ETL, and SaaS functionality.
@@ -134,9 +140,9 @@ description: "Listed below are professional engagements I've participated in dur
 			</figure>
 		</div>
 	</section>
-	<section class="wg">
-		<div class="col-lg-4-16">
-			<figure>
+	<section>
+		<div class="engagement">
+			<figure class="logo">
 				<a href="http://www.underarmour.com/" target="_blank">
 					<img src="/img/portfolio/underarmour-logo.jpg" alt="Under Armour" />
 				</a>
@@ -145,15 +151,15 @@ description: "Listed below are professional engagements I've participated in dur
 				</figcaption>
 			</figure>
 		</div>
-		<div class="col-lg-12-16">
+		<div class="content">
 			<h3>Under Armour</h3>
 			<p>
 				<a href="http://www.underarmour.com/" target="_blank">
 Under Armour, Inc.</a> is an sports clothing and accessories company, providing both sportswear and casual apparel. Eric's engagement at Under Armour involved front-end development for the ecommerce UX team. On the UX team, Eric created many tests and prototypes for predicting and analyzing the effectivenesss of marketing initiatives. Eric was also involved in a complete reengineering of the Under Armour website, contributing to front-end architecture and best practices.
 			</p>
 			<p class="small">
-				<em>
-					Specific work examples are proprietary to LookingGlass Cyber Solutions and protected by NDA.
+				<em class="small">
+					Specific work examples are proprietary to Under Armour, Inc. and protected by NDA.
 				</em>
 			</p>
 		</div>
